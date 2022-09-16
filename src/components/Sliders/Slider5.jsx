@@ -3,23 +3,33 @@ import React from 'react';
 const Slider1 = () => {
   return (
     <div className="about h-screen bg-orange w-screen flex justify-center w-fit">
-      <div className="flex h-full space-x-60">
+      <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
           <div className="flex justify-center items-center">
-            <img src="img/about-ship.svg" className="h-40" />
+            <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
               <div className="m-auto">
-                <h3 className="text-2xl font-bold text-center">AQUÍ VAN</h3>
-                <h3 className="text-6xl font-bold text-center">5 DATOS</h3>
+                <h3 className="text-lg sm:text-2xl text-lightBlue font-bold text-center">
+                  AQUÍ VAN
+                </h3>
+                <h3 className="text-4xl sm:text-6xl font-bold text-lightBlue text-center">
+                  5 DATOS
+                </h3>
                 <div className="fira-light">
-                  <p className="text-center text-xl">Sobre Tecsup que </p>
-                  <p className="text-center text-xl">te ayudarán a tomar</p>
-                  <p className="text-center text-xl">la mejor decisión</p>
+                  <p className="text-center text-md sm:text-xl">
+                    Sobre Tecsup que{' '}
+                  </p>
+                  <p className="text-center text-md sm:text-xl">
+                    te ayudarán a tomar
+                  </p>
+                  <p className="text-center text-md sm:text-xl">
+                    la mejor decisión
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="mt-20">
+          <div className="mt-20 hidden sm:block">
             <img src="img/arrow-orange-dark.svg" />
           </div>
         </div>
@@ -65,7 +75,7 @@ const Slider1 = () => {
               </div>
             </div>
           </div>
-          <div className='mt-4'>
+          <div className="mt-4">
             <img src="img/rocket.svg" className="w-20" />
           </div>
         </div>
