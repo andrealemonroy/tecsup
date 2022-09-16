@@ -127,7 +127,7 @@ function App() {
         </div>
       </div>
       <Sliders />
-      <div className="testimonies h-screen bg-lightBlack">
+      <div className="testimonies sm:h-screen bg-lightBlack">
         <div className="sm:flex h-full justify-center">
           <div className="sm:w-5/12 sm:mt-40">
             <h3 className="text-2xl sm:text-4xl text-white rubik font-bold text-center pt-8 sm:pt-0">
@@ -141,8 +141,8 @@ function App() {
             </div>
           </div>
           <div className="sm:w-5/12 flex justify-end">
-            <div className="sm:w-2/12 sm:flex sm:flex-col-reverse items-end mb-20 flex flex-col-reverse">
-              <div className="bg-yellow h-30 w-40 sm:w-60 px-4 rounded-xl text-center py-2">
+            <div className="sm:w-3/12 sm:flex sm:flex-col-reverse items-end mb-20 flex flex-col-reverse">
+              <div className="bg-yellow h-30 w-40 sm:w-60 px-4 rounded-xl text-center py-2 cursor-pointer">
                 <p className="avenir sm:text-lg text-xs">Este es mi momento</p>
                 <p className="futura font-bold text-md sm:text-xl">
                   ¡Quiero inscribirme!
@@ -150,7 +150,7 @@ function App() {
               </div>
               <img
                 src="/img/testimonies-face.png"
-                className="w-20 sm:w-40 h-auto"
+                className="w-20 sm:w-44 h-auto"
               />
             </div>
             <div className="sm:flex items-end justify-end">
