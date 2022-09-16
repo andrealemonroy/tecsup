@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header {
-  background-image: url('/public/img/header-bg.png');
+  background-image: url("/public/img/header-bg.png");
   min-height: calc(100vh - 80px);
   border-radius: 0 120px 0 0;
   background-size: cover;
@@ -15,51 +15,51 @@
 
 h1,
 h3 {
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
 
 @font-face {
-  font-family: 'Futura';
-  src: url('/public/fonts/FuturaPTBold.otf');
+  font-family: "Futura";
+  src: url("/public/fonts/FuturaPTBold.otf");
 }
 
 @font-face {
-  font-family: 'FiraLight';
-  src: url('/public/fonts/FiraSans-Book.otf');
+  font-family: "FiraLight";
+  src: url("/public/fonts/FiraSans-Book.otf");
 }
 
 @font-face {
-  font-family: 'FiraMedium';
-  src: url('/public/fonts/FiraSans-Medium.otf');
+  font-family: "FiraMedium";
+  src: url("/public/fonts/FiraSans-Medium.otf");
 }
 
 @font-face {
-  font-family: 'FiraSemiBold';
-  src: url('/public/fonts/FiraSans-SemiBold.otf');
+  font-family: "FiraSemiBold";
+  src: url("/public/fonts/FiraSans-SemiBold.otf");
 }
 
 .futura {
-  font-family: 'Futura';
+  font-family: "Futura";
 }
 
 .rubik {
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
 
 .fira-light {
-  font-family: 'FiraLight';
+  font-family: "FiraLight";
 }
 
 .fira-medium {
-  font-family: 'FiraMedium';
+  font-family: "FiraMedium";
 }
 
 .fira-semi-bold {
-  font-family: 'FiraSemiBold';
+  font-family: "FiraSemiBold";
 }
 
 .bg-dialog-button {
-  background-image: url('/public/img/about-bg-dialog.svg');
+  background-image: url("/public/img/about-bg-dialog.svg");
   background-size: contain;
   height: 60px;
   width: fit-content;
@@ -72,8 +72,29 @@ h3 {
 }
 
 .testimonies {
-  background-image: url('/public/img/testimonies-bg.png');
+  background-image: url("/public/img/testimonies-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 300px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
