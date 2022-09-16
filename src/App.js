@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Input from "./components/Input";
 import Sliders from "./components/Sliders/Sliders";
+import Footer from "./components/Footer";
 
 function App() {
   const submit = (value) => {
@@ -142,6 +143,8 @@ function App() {
           </div>
         </div>
       </div>
+      <div></div>
+      <Footer />
     </div>
   );
 }

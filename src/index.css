@@ -99,6 +99,46 @@ h3 {
   align-items: center;
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next,
+.swiper-button-prev {
   display: none !important;
+}
+
+.text-footer {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 33px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2;
+  justify-content: left;
+  padding-left: 2rem;
+  height: 10rem;
+}
+
+.logowa {
+  height: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    grid-template-columns: 1;
+    justify-content: center;
+    padding-left: 0rem;
+    gap: 0.2rem;
+    height: 5rem;
+  }
+  .logowa {
+    height: 1.2rem;
+  }
+  .text-footer {
+    font-size: 14px;
+  }
 }
