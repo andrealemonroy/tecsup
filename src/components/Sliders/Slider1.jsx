@@ -1,6 +1,6 @@
 import React from "react";
 
-const Slider1 = () => {
+const Slider1 = () => { 
   return (
     <div className="about sm:h-screen w-screen flex justify-center">
       <div className="block sm:flex h-full sm:space-x-60">
@@ -48,7 +48,7 @@ const Slider1 = () => {
               <p>Y EXPERIENCIA</p>
             </div>
             <div className="h-1 w-20 bg-lightBlue m-auto mt-4"></div>
-            <div className="sm:w-96 m-auto mt-4 text-md sm:text-lg">
+            <div className="sm:w-96 m-auto mt-4 text-md">
               <p className="fira-light">
                 Es muy importante conocer todas las ventajasde la institución
                 donde vas a estudiar, así comosi está{" "}

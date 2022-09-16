@@ -9,10 +9,10 @@ const Slider1 = () => {
           <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
               <div className="m-auto">
-                <h3 className="text-lg sm:text-2xl text-lightBlue font-bold text-center">
+                <h3 className="text-lg sm:text-2xl text-white font-bold text-center">
                   AQUÍ VAN
                 </h3>
-                <h3 className="text-4xl sm:text-6xl font-bold text-lightBlue text-center">
+                <h3 className="text-4xl sm:text-6xl font-bold text-white text-center">
                   5 DATOS
                 </h3>
                 <div className="fira-light">

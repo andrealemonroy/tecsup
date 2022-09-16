@@ -1,15 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Input from "./components/Input";
-import Sliders from "./components/Sliders/Sliders";
-import Footer from "./components/Footer";
+import logo from './logo.svg';
+import './App.css';
+import Input from './components/Input';
+import Sliders from './components/Sliders/Sliders';
+import Footer from './components/Footer';
 
 function App() {
   const submit = (value) => {
     console.log(value);
   };
   return (
-    <div className="bg-white">
+    <div className="bg-white sm:max-w-[1440px] sm:m-auto">
       <div className="sm:h-20 flex justify-center align-middle items-center">
         <img className="h-12" src="/img/logo.svg" />
       </div>
@@ -103,7 +103,10 @@ function App() {
                   id="radio-one"
                   class="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
                 />
-                <label for="radio-one" class="ml-2 text-gray-400 text-sm avenir m-auto items-center">
+                <label
+                  for="radio-one"
+                  class="ml-2 text-gray-400 text-sm avenir m-auto items-center"
+                >
                   He leído y acepto la políticas de privacidad
                 </label>
               </div>
@@ -116,33 +119,43 @@ function App() {
             </form>
           </div>
           <div>
-            <img src="/img/header-face.png" className="absolute mt-4 h-20 hidden sm:block" />
+            <img
+              src="/img/header-face.png"
+              className="absolute mt-4 h-20 hidden sm:block"
+            />
           </div>
         </div>
       </div>
       <Sliders />
       <div className="testimonies h-screen bg-lightBlack">
         <div className="sm:flex h-full justify-center">
-          <div className="w-5/12 mt-40">
-            <h3 className="text-4xl text-white rubik font-bold text-center">
+          <div className="sm:w-5/12 sm:mt-40">
+            <h3 className="text-2xl sm:text-4xl text-white rubik font-bold text-center pt-8 sm:pt-0">
               ¿QUÉ DICEN
             </h3>
-            <h3 className="text-4xl text-white rubik font-bold text-center">
+            <h3 className="text-2xl sm:text-4xl text-white rubik font-bold text-center">
               NUESTROS EGRESADOS?
             </h3>
             <div className="sm:flex justify-center">
-              <img src="/img/testimonies-video.png" className="h-72" />
+              <img src="/img/testimonies-video.png" className="sm:h-72" />
             </div>
           </div>
-          <div className="sm:flex sm:flex-col-reverse items-end mb-20">
-            <div className="bg-yellow h-30 w-60 px-4 rounded-xl text-center py-2">
-              <p className="avenir">Este es mi momento</p>
-              <p className="futura font-bold text-xl">¡Quiero inscribirme!</p>
+          <div className="sm:w-5/12 flex justify-end">
+            <div className="sm:w-2/12 sm:flex sm:flex-col-reverse items-end mb-20 flex flex-col-reverse">
+              <div className="bg-yellow h-30 w-40 sm:w-60 px-4 rounded-xl text-center py-2">
+                <p className="avenir sm:text-lg text-xs">Este es mi momento</p>
+                <p className="futura font-bold text-md sm:text-xl">
+                  ¡Quiero inscribirme!
+                </p>
+              </div>
+              <img
+                src="/img/testimonies-face.png"
+                className="w-20 sm:w-40 h-auto"
+              />
             </div>
-            <img src="/img/testimonies-face.png" className="h-52" />
-          </div>
-          <div className="w-4/12 sm:flex items-end">
-            <img src="/img/testimonies-person.png" className="h-3/4" />
+            <div className="sm:flex items-end justify-end">
+              <img src="/img/testimonies-person.png" className="sm:h-3/4" />
+            </div>
           </div>
         </div>
       </div>
