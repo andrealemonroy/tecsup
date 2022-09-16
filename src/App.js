@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
-import Input from './components/Input';
-import Sliders from './components/Sliders/Sliders';
-import Footer from './components/Footer';
-=======
 import logo from "./logo.svg";
 import "./App.css";
 import Input from "./components/Input";
@@ -12,7 +5,6 @@ import Sliders from "./components/Sliders/Sliders";
 import Footer from "./components/Footer";
 import { useState } from "react";
 import axios from "axios";
->>>>>>> 47887ac (Adiciona información al Sheet)
 
 function App() {
   // form states
