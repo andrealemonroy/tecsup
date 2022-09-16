@@ -193,12 +193,26 @@ function App() {
         </div>
       </div>
       <div className="testimonies h-screen bg-lightBlack">
-        <div className="flex h-full">
-          <div className="w-1/2 mt-40">
-            <h3 className='text-4xl text-white rubik font-bold text-center'>¿QUÉ DICEN</h3>
-            <h3 className='text-4xl text-white rubik font-bold text-center'>NUESTROS EGRESADOS?</h3>
+        <div className="flex h-full justify-center">
+          <div className="w-5/12 mt-40">
+            <h3 className="text-4xl text-white rubik font-bold text-center">
+              ¿QUÉ DICEN
+            </h3>
+            <h3 className="text-4xl text-white rubik font-bold text-center">
+              NUESTROS EGRESADOS?
+            </h3>
+            <div className="flex justify-center">
+              <img src="/img/testimonies-video.png" className="h-72" />
+            </div>
           </div>
-          <div className='w-1/2 flex items-end'>
+          <div className="flex flex-col-reverse items-end mb-20">
+            <div className="bg-yellow h-30 w-60 px-4 rounded-xl text-center py-2">
+              <p className="avenir">Este es mi momento</p>
+              <p className="futura font-bold text-xl">¡Quiero inscribirme!</p>
+            </div>
+            <img src="/img/testimonies-face.png" className="h-52" />
+          </div>
+          <div className="w-4/12 flex items-end">
             <img src="/img/testimonies-person.png" className="h-3/4" />
           </div>
         </div>
