@@ -29,7 +29,7 @@ function App() {
       DNI: dni,
       Carrera: carrera,
       Modalidad: modalidad,
-      Aceptacion: acepta,
+      Aceptacion_politicas_privacidad: acepta,
     };
 
     axios
@@ -162,20 +162,79 @@ function App() {
                 />
               </div>
               <div className="flex space-x-2">
-                <input
+                <select
                   className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
                   type="text"
-                  placeholder="Carrera*"
-                  onChange={(e) => setCarrera(e.target.value)}
+                  placeholder="Seleccione Carrera*"
                   value={carrera}
-                />
-                <input
+                  onChange={(e) => setCarrera(e.target.value)}
+                >
+                  <option value="0">Seleccione Carrera</option>
+                  <option value="Administración_de_datos">
+                    Administración de datos
+                  </option>
+                  <option value="Administración_de_Redes_y_Comunicaciones">
+                    Administración de Redes y Comunicaciones
+                  </option>
+                  <option value="Big_Data_y_Ciencia_de_Datos">
+                    Big Data y Ciencia de Datos
+                  </option>
+                  <option value="Diseño_y_Desarrollo_de_Simuladores_y_Videojuegos">
+                    Diseño y Desarrollo de Simuladores y Videojuegos
+                  </option>
+                  <option value="Diseño_y_Desarrollo_de_Software">
+                    Diseño y Desarrollo de Software
+                  </option>
+                  <option value="Modelado_y_Animación_Digital">
+                    Modelado y Animación Digital
+                  </option>
+                  <option value="Operaciones_Mineras">
+                    Operaciones Mineras
+                  </option>
+                  <option value="Procesos_Químicos_y_Metalúrgicos">
+                    Procesos Químicos y Metalúrgicos
+                  </option>
+                  <option value="Producción_y_Gestión_Industrial">
+                    Producción y Gestión Industrial
+                  </option>
+                  <option value="Logística_Digital_Integrada">
+                    Logística Digital Integrada
+                  </option>
+                  <option value="Diseño_Industrial">Diseño Industrial</option>
+                  <option value="Aviónica_y_Mecánica_Aeronáutica">
+                    Aviónica y Mecánica Aeronáutica
+                  </option>
+                  <option value="Gestión_y_Mantenimiento_de_Maquinaria_Industrial">
+                    Gestión y Mantenimiento de Maquinaria Industrial
+                  </option>
+                  <option value="Gestión_y_Mantenimiento_de_Maquinaria_Pesada">
+                    Gestión y Mantenimiento de Maquinaria Pesada
+                  </option>
+                  <option value="Mantenimiento_de_Equipo_Pesado">
+                    Mantenimiento de Equipo Pesado
+                  </option>
+                  <option value="Mecatrónica_Industrial">
+                    Mecatrónica Industrial
+                  </option>
+                  <option value="Electricidad_Industrial">
+                    Electricidad Industrial
+                  </option>
+                  <option value="Electrónica_y_Automatización_Industrial">
+                    Electrónica y Automatización Industrial
+                  </option>
+                </select>
+                <select
                   className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
                   type="text"
                   placeholder="Modalidad*"
+                  value={carrera}
                   onChange={(e) => setModalidad(e.target.value)}
-                  value={modalidad}
-                />
+                >
+                  <option value="0">Seleccione modalidad</option>
+                  <option value="Alumno_Talento">Alumno Talento</option>
+                  <option value="Examen_de_Admisión">Examen de Admisión</option>
+                  <option value="Tec_Gym">Tec Gym</option>
+                </select>
               </div>
               <div class="item_seleccion flex">
                 <input
