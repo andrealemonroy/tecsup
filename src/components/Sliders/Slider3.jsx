@@ -15,7 +15,7 @@ const Slider1 = () => {
                 <h3 className="text-4xl sm:text-6xl font-bold text-white text-center">
                   5 DATOS
                 </h3>
-                <div className="fira-light">
+                <div className="fira-light text-white">
                   <p className="text-center text-md sm:text-xl">
                     Sobre Tecsup que{' '}
                   </p>
