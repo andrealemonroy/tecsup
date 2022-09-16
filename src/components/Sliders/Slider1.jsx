@@ -2,8 +2,8 @@ import React from "react";
 
 const Slider1 = () => {
   return (
-    <div className="about h-screen w-screen flex justify-center w-fit">
-      <div className="flex h-full">
+    <div className="about h-screen w-screen flex justify-center">
+      <div className="flex h-full space-x-60">
         <div className=" relative m-auto">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40" />

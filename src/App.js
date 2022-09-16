@@ -9,28 +9,28 @@ function App() {
   };
   return (
     <div className="bg-white">
-      <div className="h-20 flex justify-center align-middle items-center">
+      <div className="sm:h-20 flex justify-center align-middle items-center">
         <img className="h-12" src="/img/logo.svg" />
       </div>
-      <div className="header flex relative">
+      <div className="header sm:flex relative">
         <img
           src="/img/header-face.png"
-          className="absolute left-1/2 ml-20 h-12 mt-28"
+          className="hidden sm:block absolute left-1/2 ml-20 h-12 mt-28"
         />
         <img
           src="/img/header-face.png"
-          className="absolute left-80 mt-96 h-16"
+          className="hidden sm:block absolute left-80 mt-96 h-16"
         />
 
         <div className="w-2/5">
           <img
             src="/img/header-plane.png"
-            className="absolute top-20 left-96"
+            className="absolute top-20 left-96 hidden sm:block "
           />
           <div className="m-20">
             <h1 className="text-white font-medium text-3xl">ÚNETE A LA</h1>
             <h1 className="text-yellow font-black text-5xl">MEJOR</h1>
-            <div className="flex">
+            <div className="sm:flex">
               <div>
                 <h1 className="text-yellow font-black text-5xl">PARTE</h1>
               </div>
@@ -46,7 +46,7 @@ function App() {
               ADMISIÓN 2023-01
             </h1>
           </div>
-          <div className="flex absolute bottom-0 left-36 rubik">
+          <div className="sm:flex absolute bottom-0 left-36 rubik">
             <img src="/img/header-rectangle.svg" className="h-40" />
             <div className="absolute left-44 font-semibold text-xl mt-4">
               Postula a TECSUP
@@ -56,11 +56,11 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="w-1/5 flex items-end">
+        <div className="w-1/5 sm:flex items-end">
           <img src="/img/header-person.png" className="absolute img-person" />
         </div>
-        <div className="w-2/5 flex flex-col ml-20">
-          <div className="bg-white p-4 flex flex-col space-y-4 h-fit rounded-2xl w-fit mt-20">
+        <div className="w-2/5 sm:flex sm:flex-col ml-20">
+          <div className="bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl w-fit mt-20">
             <div className="text-center text-lg font-bold futura">
               <p>Inscríbete AHORA y</p>
               <p>obtén BENEFICIOS ÚNICOS</p>
@@ -70,23 +70,23 @@ function App() {
                 e.preventDefault();
                 submit(e.target[0].value);
               }}
-              className="flex flex-col space-y-4"
+              className="sm:flex sm:flex-col space-y-4"
             >
               <input
                 className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
                 type="text"
                 placeholder="Nombres*"
               />
-              <div className="flex space-x-2">
+              <div className="sm:flex space-x-2">
                 <Input placeholder="Apellido paterno*" />
                 <Input placeholder="Apellido materno*" />
               </div>
               <Input placeholder="Correo electrónico*" />
-              <div className="flex space-x-2">
+              <div className="sm:flex space-x-2">
                 <Input placeholder="Celular*" />
                 <Input placeholder="DNI*" />
               </div>
-              <div className="flex space-x-2">
+              <div className="sm:flex space-x-2">
                 <Input placeholder="Carrera*" />
                 <Input placeholder="Modalidad*" />
               </div>
@@ -118,7 +118,7 @@ function App() {
       </div>
       <Sliders />
       <div className="testimonies h-screen bg-lightBlack">
-        <div className="flex h-full justify-center">
+        <div className="sm:flex h-full justify-center">
           <div className="w-5/12 mt-40">
             <h3 className="text-4xl text-white rubik font-bold text-center">
               ¿QUÉ DICEN
@@ -126,18 +126,18 @@ function App() {
             <h3 className="text-4xl text-white rubik font-bold text-center">
               NUESTROS EGRESADOS?
             </h3>
-            <div className="flex justify-center">
+            <div className="sm:flex justify-center">
               <img src="/img/testimonies-video.png" className="h-72" />
             </div>
           </div>
-          <div className="flex flex-col-reverse items-end mb-20">
+          <div className="sm:flex sm:flex-col-reverse items-end mb-20">
             <div className="bg-yellow h-30 w-60 px-4 rounded-xl text-center py-2">
               <p className="avenir">Este es mi momento</p>
               <p className="futura font-bold text-xl">¡Quiero inscribirme!</p>
             </div>
             <img src="/img/testimonies-face.png" className="h-52" />
           </div>
-          <div className="w-4/12 flex items-end">
+          <div className="w-4/12 sm:flex items-end">
             <img src="/img/testimonies-person.png" className="h-3/4" />
           </div>
         </div>
