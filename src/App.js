@@ -1,12 +1,62 @@
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
 import Input from './components/Input';
 import Sliders from './components/Sliders/Sliders';
 import Footer from './components/Footer';
+=======
+import logo from "./logo.svg";
+import "./App.css";
+import Input from "./components/Input";
+import Sliders from "./components/Sliders/Sliders";
+import Footer from "./components/Footer";
+import { useState } from "react";
+import axios from "axios";
+>>>>>>> 47887ac (Adiciona información al Sheet)
 
 function App() {
-  const submit = (value) => {
-    console.log(value);
+  // form states
+  const [nombres, setNombres] = useState("");
+  const [paterno, setPaterno] = useState("");
+  const [materno, setMaterno] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [celular, setCelular] = useState("");
+  const [dni, setDni] = useState("");
+  const [carrera, setCarrera] = useState("");
+  const [modalidad, setModalidad] = useState("");
+  const [acepta, setAcepta] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      Nombres: nombres,
+      Paterno: paterno,
+      Materno: materno,
+      Correo: correo,
+      Celular: celular,
+      DNI: dni,
+      Carrera: carrera,
+      Modalidad: modalidad,
+      Aceptacion: acepta,
+    };
+
+    axios
+      .post(
+        "https://sheet.best/api/sheets/349b9b2e-6fc5-492d-8c66-3d70f7ef197d",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+        setNombres("");
+        setPaterno("");
+        setMaterno("");
+        setCorreo("");
+        setCelular("");
+        setDni("");
+        setCarrera("");
+        setModalidad("");
+        setAcepta("");
+      });
   };
   return (
     <div className="bg-white sm:max-w-[1440px] sm:m-auto">
@@ -70,36 +120,78 @@ function App() {
               <p>obtén BENEFICIOS ÚNICOS</p>
             </div>
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                submit(e.target[0].value);
-              }}
+              onSubmit={handleSubmit}
               className="sm:flex sm:flex-col space-y-4"
             >
               <input
                 className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
                 type="text"
                 placeholder="Nombres*"
+                onChange={(e) => setNombres(e.target.value)}
+                value={nombres}
               />
               <div className="flex space-x-2">
-                <Input placeholder="Apellido paterno*" />
-                <Input placeholder="Apellido materno*" />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="Apellido paterno*"
+                  onChange={(e) => setPaterno(e.target.value)}
+                  value={paterno}
+                />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="Apellido materno*"
+                  onChange={(e) => setMaterno(e.target.value)}
+                  value={materno}
+                />
               </div>
-              <Input placeholder="Correo electrónico*" />
+              <input
+                className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                type="text"
+                placeholder="Correo electrónico*"
+                onChange={(e) => setCorreo(e.target.value)}
+                value={correo}
+              />
               <div className="flex space-x-2">
-                <Input placeholder="Celular*" />
-                <Input placeholder="DNI*" />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="Celular*"
+                  onChange={(e) => setCelular(e.target.value)}
+                  value={celular}
+                />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="DNI*"
+                  onChange={(e) => setDni(e.target.value)}
+                  value={dni}
+                />
               </div>
               <div className="flex space-x-2">
-                <Input placeholder="Carrera*" />
-                <Input placeholder="Modalidad*" />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="Carrera*"
+                  onChange={(e) => setCarrera(e.target.value)}
+                  value={carrera}
+                />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="Modalidad*"
+                  onChange={(e) => setModalidad(e.target.value)}
+                  value={modalidad}
+                />
               </div>
               <div class="item_seleccion flex">
                 <input
                   type="radio"
                   checked={false}
-                  onChange={() => {}}
+                  onChange={(e) => setAcepta(e.target.value)}
                   name="radio"
+                  value={acepta}
                   id="radio-one"
                   class="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
                 />
