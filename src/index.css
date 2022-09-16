@@ -4,9 +4,12 @@
 
 .header {
   background-image: url('/public/img/header-bg.png');
-  min-height: calc(100vh - 80px);
+
   border-radius: 0 120px 0 0;
   background-size: cover;
+}
+.height-header {
+  min-height: calc(100vh - 80px);
 }
 @media screen and (max-width: 768px) {
   .header {
@@ -109,7 +112,7 @@ h3 {
 }
 
 .text-footer {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -147,6 +150,6 @@ h3 {
   }
 }
 
-.about{
+.about {
   padding: 20px;
 }
