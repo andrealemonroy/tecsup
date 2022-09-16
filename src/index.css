@@ -98,3 +98,7 @@ h3 {
   -webkit-align-items: center;
   align-items: center;
 }
+
+.swiper-button-next, .swiper-button-prev{
+  display: none !important;
+}
