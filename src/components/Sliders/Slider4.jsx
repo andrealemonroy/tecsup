@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Slider1 = () => {
   return (
@@ -35,28 +35,21 @@ const Slider1 = () => {
               <p>Que POTENCIEN</p>
               <p>tu CARRERA PROFESIONAL</p>
             </div>
-            <div className="h-1 w-20 bg-orangeDark m-auto mt-4"></div>
-            <div className="w-96 m-auto mt-4">
-              <p className="fira-light">
-                Es muy importante conocer todas las ventajasde la institución
-                donde vas a estudiar, así comosi está{" "}
-                <span className="fira-medium">licenciada</span>, si tiene
-                <span className="fira-medium">convenios</span> y cuál essu
-                enfoque o la{" "}
-                <span className="fira-medium">visión a futuro.</span>
+            <div className="h-1 w-20 bg-black m-auto my-4"></div>
+            <div className="w-96 bg-gray-50 rounded-b-2xl h-32 px-4 py-6 m-auto">
+              <p className="fira">
+                <span className="font-semibold">
+                  En Tecsup potenciamos tu talento,
+                </span>{' '}
+                ayudando a que te insertes en el mundo laboral desde 4to ciclo y
+                eres asesorado por un docente.
               </p>
             </div>
             <div>
-              <img
-                src="img/about-video1.png"
-                className="h-48 m-auto mt-4 cursor-pointer"
-              />
-            </div>
-            <div>
               <p className="fira-light text-center">De aquí soy</p>
-              <div className="bg-dialog-button">
+              <div className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer">
                 <p className="text-center m-auto text-xl rubik text-white font-bold">
-                  ¡Dame info!
+                  ¡Quiero inscribirme YA!
                 </p>
               </div>
             </div>
@@ -64,6 +57,9 @@ const Slider1 = () => {
               <p className="fira-light text-center pt-10">
                 Nuestros egresados trabajan en:
               </p>
+            </div>
+            <div>
+              <img src="/img/about-logos.png" className='h-20'/>
             </div>
           </div>
         </div>

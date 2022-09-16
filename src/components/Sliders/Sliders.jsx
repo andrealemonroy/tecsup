@@ -32,6 +32,7 @@ const Sliders = () => {
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
+      slidesPerView={1}
     >
       <SwiperSlide>
         <Slider1 />

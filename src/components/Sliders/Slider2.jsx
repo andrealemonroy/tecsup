@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Slider1 = () => {
   return (
-    <div className="about h-screen bg-yellow w-screen flex justify-center w-fit">
-      <div className="flex h-full space-x-60">
+    <div className="about sm:h-screen w-screen flex justify-center">
+      <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40" />
@@ -55,17 +55,17 @@ const Slider1 = () => {
                 className="h-48 m-auto mt-4 cursor-pointer"
               />
             </div>
-            <div>
+            <div className='flex flex-col justify-center'>
               <p className="fira-light text-center">Vamos con fe </p>
-              <div className="bg-dialog-button">
-                <p className="text-center m-auto text-xl rubik text-white font-bold">
+              <div className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto">
+                <p className="text-center m-auto text-xl rubik text-white font-bold cursor-pointer">
                   ¡Quiero inscribirme!
                 </p>
               </div>
             </div>
           </div>
-          <div>
-            <img src="img/about-books.svg" className="w-40" />
+          <div className='items-start'>
+            <img src="img/about-tip2.svg" className="w-60" />
           </div>
         </div>
       </div>

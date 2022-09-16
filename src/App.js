@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Input from "./components/Input";
-import Sliders from "./components/Sliders/Sliders";
+import logo from './logo.svg';
+import './App.css';
+import Input from './components/Input';
+import Sliders from './components/Sliders/Sliders';
 
 function App() {
   const submit = (value) => {
@@ -21,45 +21,48 @@ function App() {
           src="/img/header-face.png"
           className="hidden sm:block absolute left-80 mt-96 h-16"
         />
-
-        <div className="w-2/5">
-          <img
-            src="/img/header-plane.png"
-            className="absolute top-20 left-96 hidden sm:block "
-          />
-          <div className="m-20">
-            <h1 className="text-white font-medium text-3xl">ÚNETE A LA</h1>
-            <h1 className="text-yellow font-black text-5xl">MEJOR</h1>
-            <div className="sm:flex">
-              <div>
-                <h1 className="text-yellow font-black text-5xl">PARTE</h1>
+        <div className="sm:w-3/5 flex">
+          <div className="">
+            <img
+              src="/img/header-plane.png"
+              className="absolute top-20 left-96 hidden sm:block "
+            />
+            <div className="sm:m-20 p-10 sm:p-0">
+              <h1 className="text-white font-medium sm:text-3xl text-xl">
+                ÚNETE A LA
+              </h1>
+              <h1 className="text-yellow font-black text-5xl">MEJOR</h1>
+              <div className="flex">
+                <div>
+                  <h1 className="text-yellow font-black text-5xl">PARTE</h1>
+                </div>
+                <div className="ml-5">
+                  <img src="/img/header-arrow.svg" className="h-12" />
+                </div>
               </div>
-              <div className="ml-5">
-                <img src="/img/header-arrow.svg" className="h-12" />
+              <h1 className="text-white font-medium sm:text-3xl text-xl">
+                DE LA TECNOLOGÍA
+              </h1>
+              <div className="h-0.5 bg-white w-10 sm:my-10"></div>
+              <h1 className="text-yellow font-black sm:text-4xl text-2xl sm:w-full w-40 sm:mt-0 mt-20">
+                ADMISIÓN 2023-01
+              </h1>
+            </div>
+            <div className="sm:flex absolute bottom-0 left-36 rubik hidden">
+              <img src="/img/header-rectangle.svg" className="h-40" />
+              <div className="absolute left-44 font-semibold text-xl mt-4">
+                Postula a TECSUP
+              </div>
+              <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl">
+                ADMISIÓN 23-01
               </div>
             </div>
-            <h1 className="text-white font-medium text-3xl">
-              DE LA TECNOLOGÍA
-            </h1>
-            <div className="h-0.5 bg-white w-10 my-10"></div>
-            <h1 className="text-yellow font-black text-4xl">
-              ADMISIÓN 2023-01
-            </h1>
           </div>
-          <div className="sm:flex absolute bottom-0 left-36 rubik">
-            <img src="/img/header-rectangle.svg" className="h-40" />
-            <div className="absolute left-44 font-semibold text-xl mt-4">
-              Postula a TECSUP
-            </div>
-            <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl">
-              ADMISIÓN 23-01
-            </div>
+          <div className="sm:w-1/5 sm:flex items-end hidden">
+            <img src="/img/header-person.png" className="absolute img-person" />
           </div>
         </div>
-        <div className="w-1/5 sm:flex items-end">
-          <img src="/img/header-person.png" className="absolute img-person" />
-        </div>
-        <div className="w-2/5 sm:flex sm:flex-col ml-20">
+        <div className="sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4">
           <div className="bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl w-fit mt-20">
             <div className="text-center text-lg font-bold futura">
               <p>Inscríbete AHORA y</p>
@@ -77,20 +80,20 @@ function App() {
                 type="text"
                 placeholder="Nombres*"
               />
-              <div className="sm:flex space-x-2">
+              <div className="flex space-x-2">
                 <Input placeholder="Apellido paterno*" />
                 <Input placeholder="Apellido materno*" />
               </div>
               <Input placeholder="Correo electrónico*" />
-              <div className="sm:flex space-x-2">
+              <div className="flex space-x-2">
                 <Input placeholder="Celular*" />
                 <Input placeholder="DNI*" />
               </div>
-              <div className="sm:flex space-x-2">
+              <div className="flex space-x-2">
                 <Input placeholder="Carrera*" />
                 <Input placeholder="Modalidad*" />
               </div>
-              <div class="item_seleccion">
+              <div class="item_seleccion flex">
                 <input
                   type="radio"
                   checked={false}
@@ -99,7 +102,7 @@ function App() {
                   id="radio-one"
                   class="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
                 />
-                <label for="radio-one" class="ml-2">
+                <label for="radio-one" class="ml-2 text-gray-400 text-sm avenir m-auto items-center">
                   He leído y acepto la políticas de privacidad
                 </label>
               </div>
@@ -112,7 +115,7 @@ function App() {
             </form>
           </div>
           <div>
-            <img src="/img/header-face.png" className="absolute mt-4 h-20" />
+            <img src="/img/header-face.png" className="absolute mt-4 h-20 hidden sm:block" />
           </div>
         </div>
       </div>

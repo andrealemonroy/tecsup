@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Slider1 = () => {
   return (
@@ -46,18 +46,46 @@ const Slider1 = () => {
                 y como el futuro de este país debes estar a su ritmo.
               </p>
             </div>
-            <div>
-              <img
-                src="img/about-video1.png"
-                className="h-48 m-auto mt-4 cursor-pointer"
-              />
-            </div>
-            <div>
-              <p className="fira-light text-center">De aquí soy</p>
-              <div className="bg-dialog-button">
-                <p className="text-center m-auto text-xl rubik text-white font-bold">
-                  ¡Quiero inscribirme YA!
-                </p>
+            <div className="flex space-x-4">
+              <div>
+                <img
+                  src="img/about-tip3-1.svg"
+                  className="h-48 m-auto mt-4 cursor-pointer"
+                />
+                <p className="text-white text-center my-2">Carrera 1</p>
+                <div className="bg-black h-15 w-48 px-2 py-2 rounded m-auto cursor-pointer">
+                  <p className="text-white text-xs text-center">Más info plz</p>
+                  <p className="text-center m-auto text-lg fira text-white font-bold ">
+                    ¡Esta es mi carrera!
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <img
+                  src="img/about-tip3-2.svg"
+                  className="h-48 m-auto mt-4 cursor-pointer"
+                />
+                <p className="text-white text-center my-2">Carrera 2</p>
+                <div className="bg-black h-15 w-48 px-2 py-2 rounded m-auto cursor-pointer">
+                  <p className="text-white text-xs text-center">Más info plz</p>
+                  <p className="text-center m-auto text-lg fira text-white font-bold ">
+                    ¡Esta es mi carrera!
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img
+                  src="img/about-tip3-3.svg"
+                  className="h-48 m-auto mt-4 cursor-pointer"
+                />
+                <p className="text-white text-center my-2">Carrera 3</p>
+                <div className="bg-black h-15 w-48 px-2 py-2 rounded m-auto cursor-pointer">
+                  <p className="text-white text-xs text-center">Más info plz</p>
+                  <p className="text-center m-auto text-lg fira text-white font-bold ">
+                    ¡Esta es mi carrera!
+                  </p>
+                </div>
               </div>
             </div>
           </div>

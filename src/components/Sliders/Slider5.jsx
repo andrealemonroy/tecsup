@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Slider1 = () => {
   return (
@@ -44,7 +44,7 @@ const Slider1 = () => {
             </div>
             <div className="h-1 w-20 bg-orange   m-auto mt-4"></div>
             <div className="w-96 m-auto mt-4">
-              <p className="fira-light">
+              <p className="fira-light m-auto">
                 Un buen profesional no solo necesita de TEORÍA, debe de
                 prepararse con la tecnología con la que actualmente trabajan las
                 empresas.
@@ -58,15 +58,15 @@ const Slider1 = () => {
             </div>
             <div>
               <p className="fira-light text-center">Lo decicí</p>
-              <div className="bg-dialog-button">
+              <div className="bg-orangeButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer">
                 <p className="text-center m-auto text-xl rubik text-white font-bold">
                   ¡Quiero inscribirme YA!
                 </p>
               </div>
             </div>
           </div>
-          <div>
-            <img src="img/rocket.svg" className="w-40" />
+          <div className='mt-4'>
+            <img src="img/rocket.svg" className="w-20" />
           </div>
         </div>
       </div>

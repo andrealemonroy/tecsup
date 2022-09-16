@@ -2,28 +2,28 @@ import React from "react";
 
 const Slider1 = () => {
   return (
-    <div className="about h-screen w-screen flex justify-center">
-      <div className="flex h-full space-x-60">
+    <div className="about sm:h-screen w-screen flex justify-center">
+      <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
-          <div className="flex justify-center items-center">
-            <img src="img/about-ship.svg" className="h-40" />
+          <div className="block sm:flex justify-center items-center">
+            <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
               <div className="m-auto">
-                <h3 className="text-2xl text-lightBlue font-bold text-center">
+                <h3 className="text-lg sm:text-2xl text-lightBlue font-bold text-center">
                   AQUÍ VAN
                 </h3>
-                <h3 className="text-6xl font-bold text-lightBlue text-center">
+                <h3 className="text-4xl sm:text-6xl font-bold text-lightBlue text-center">
                   5 DATOS
                 </h3>
                 <div className="fira-light">
-                  <p className="text-center text-xl">Sobre Tecsup que </p>
-                  <p className="text-center text-xl">te ayudarán a tomar</p>
-                  <p className="text-center text-xl">la mejor decisión</p>
+                  <p className="text-center text-md sm:text-xl">Sobre Tecsup que </p>
+                  <p className="text-center text-md sm:text-xl">te ayudarán a tomar</p>
+                  <p className="text-center text-md sm:text-xl">la mejor decisión</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="mt-20">
+          <div className="mt-20 hidden sm:block">
             <img src="img/body-arrows.svg" />
           </div>
         </div>
@@ -38,17 +38,17 @@ const Slider1 = () => {
               </p>
             </div>
             <div className="fira-light mt-4">
-              <p className="text-center text-xl">Asegúrate de que la</p>
-              <p className="text-center text-xl">
+              <p className="text-center text-md sm:text-xl">Asegúrate de que la</p>
+              <p className="text-center text-md sm:text-xl">
                 institución que elijas cuente con
               </p>
             </div>
-            <div className="rubik font-bold text-3xl text-center mt-4">
+            <div className="rubik font-bold text-xl sm:text-3xl text-center mt-4">
               <p>PRESTIGIO, RESPALDO</p>
               <p>Y EXPERIENCIA</p>
             </div>
             <div className="h-1 w-20 bg-lightBlue m-auto mt-4"></div>
-            <div className="w-96 m-auto mt-4">
+            <div className="sm:w-96 m-auto mt-4 text-md sm:text-lg">
               <p className="fira-light">
                 Es muy importante conocer todas las ventajasde la institución
                 donde vas a estudiar, así comosi está{" "}
@@ -73,7 +73,7 @@ const Slider1 = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="sm:block hidden">
             <img src="img/about-books.svg" className="w-40" />
           </div>
         </div>

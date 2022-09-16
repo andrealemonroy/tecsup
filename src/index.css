@@ -3,63 +3,67 @@
 @tailwind utilities;
 
 .header {
-  background-image: url("/public/img/header-bg.png");
+  background-image: url('/public/img/header-bg.png');
   min-height: calc(100vh - 80px);
   border-radius: 0 120px 0 0;
   background-size: cover;
 }
-
+@media screen and (max-width: 768px) {
+  .header {
+    border-radius: 0;
+  }
+}
 .img-person {
   max-height: calc(100vh - 120px);
 }
 
 h1,
 h3 {
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 
 @font-face {
-  font-family: "Futura";
-  src: url("/public/fonts/FuturaPTBold.otf");
+  font-family: 'Futura';
+  src: url('/public/fonts/FuturaPTBold.otf');
 }
 
 @font-face {
-  font-family: "FiraLight";
-  src: url("/public/fonts/FiraSans-Book.otf");
+  font-family: 'FiraLight';
+  src: url('/public/fonts/FiraSans-Book.otf');
 }
 
 @font-face {
-  font-family: "FiraMedium";
-  src: url("/public/fonts/FiraSans-Medium.otf");
+  font-family: 'FiraMedium';
+  src: url('/public/fonts/FiraSans-Medium.otf');
 }
 
 @font-face {
-  font-family: "FiraSemiBold";
-  src: url("/public/fonts/FiraSans-SemiBold.otf");
+  font-family: 'FiraSemiBold';
+  src: url('/public/fonts/FiraSans-SemiBold.otf');
 }
 
 .futura {
-  font-family: "Futura";
+  font-family: 'Futura';
 }
 
 .rubik {
-  font-family: "Rubik";
+  font-family: 'Rubik';
 }
 
 .fira-light {
-  font-family: "FiraLight";
+  font-family: 'FiraLight';
 }
 
 .fira-medium {
-  font-family: "FiraMedium";
+  font-family: 'FiraMedium';
 }
 
 .fira-semi-bold {
-  font-family: "FiraSemiBold";
+  font-family: 'FiraSemiBold';
 }
 
 .bg-dialog-button {
-  background-image: url("/public/img/about-bg-dialog.svg");
+  background-image: url('/public/img/about-bg-dialog.svg');
   background-size: contain;
   height: 60px;
   width: fit-content;
@@ -72,7 +76,7 @@ h3 {
 }
 
 .testimonies {
-  background-image: url("/public/img/testimonies-bg.png");
+  background-image: url('/public/img/testimonies-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 300px;
@@ -99,6 +103,7 @@ h3 {
   align-items: center;
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next,
+.swiper-button-prev {
   display: none !important;
 }
