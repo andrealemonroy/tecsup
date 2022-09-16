@@ -70,3 +70,9 @@ h3 {
   display: flex;
   cursor: pointer;
 }
+
+.testimonies {
+  background-image: url('/public/img/testimonies-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

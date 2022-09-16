@@ -186,9 +186,20 @@ function App() {
                 </div>
               </div>
             </div>
-            <div >
-              <img src="img/about-books.svg" className='w-40'/>
+            <div>
+              <img src="img/about-books.svg" className="w-40" />
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="testimonies h-screen bg-lightBlack">
+        <div className="flex h-full">
+          <div className="w-1/2">
+            <h3 className='text-4xl text-white rubik font-bold text-center'>¿QUÉ DICEN</h3>
+            <h3 className='text-4xl text-white rubik font-bold text-center'>NUESTROS EGRESADOS?</h3>
+          </div>
+          <div className='w-1/2 flex items-end'>
+            <img src="/img/testimonies-person.png" className="h-3/4" />
           </div>
         </div>
       </div>
