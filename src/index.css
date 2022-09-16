@@ -75,4 +75,5 @@ h3 {
   background-image: url('/public/img/testimonies-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: 300px;
 }

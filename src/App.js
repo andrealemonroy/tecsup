@@ -194,7 +194,7 @@ function App() {
       </div>
       <div className="testimonies h-screen bg-lightBlack">
         <div className="flex h-full">
-          <div className="w-1/2">
+          <div className="w-1/2 mt-40">
             <h3 className='text-4xl text-white rubik font-bold text-center'>¿QUÉ DICEN</h3>
             <h3 className='text-4xl text-white rubik font-bold text-center'>NUESTROS EGRESADOS?</h3>
           </div>
