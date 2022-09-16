@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  background-image: url('/public/img/header-bg.png');
+  min-height: calc(100vh - 80px);
+  border-radius: 0 120px 0 0;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.img-person {
+  max-height: calc(100vh - 120px);
+}
+
+h1,
+h3 {
+  font-family: 'Rubik';
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('/public/fonts/FuturaPTBold.otf');
+}
+
+@font-face {
+  font-family: 'FiraLight';
+  src: url('/public/fonts/FiraSans-Book.otf');
+}
+
+@font-face {
+  font-family: 'FiraMedium';
+  src: url('/public/fonts/FiraSans-Medium.otf');
+}
+
+@font-face {
+  font-family: 'FiraSemiBold';
+  src: url('/public/fonts/FiraSans-SemiBold.otf');
+}
+
+.futura {
+  font-family: 'Futura';
+}
+
+.rubik {
+  font-family: 'Rubik';
+}
+
+.fira-light {
+  font-family: 'FiraLight';
+}
+
+.fira-medium {
+  font-family: 'FiraMedium';
+}
+
+.fira-semi-bold {
+  font-family: 'FiraSemiBold';
+}
+
+.bg-dialog-button {
+  background-image: url('/public/img/about-bg-dialog.svg');
+  background-size: contain;
+  height: 60px;
+  width: fit-content;
+  min-width: 200px;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
 }
