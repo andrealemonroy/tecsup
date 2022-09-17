@@ -2,7 +2,7 @@ import React from 'react';
 
 const Slider1 = () => {
   return (
-    <div className="about sm:h-screen w-screen flex justify-center">
+    <div className="about sm:h-screen w-screen flex justify-center bg-yellow items-center">
       <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
           <div className="flex justify-center items-center">

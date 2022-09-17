@@ -2,11 +2,11 @@ import React from 'react';
 
 const Slider1 = () => {
   return (
-    <div className="about h-screen bg-pink w-screen flex justify-center w-fit">
+    <div className="about bg-pink w-screen flex justify-center sm:h-screen items-center">
       <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
           <div className="flex justify-center items-center">
-          <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
+            <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
               <div className="m-auto">
                 <h3 className="text-lg sm:text-2xl text-black font-bold text-center">
@@ -68,9 +68,29 @@ const Slider1 = () => {
                 Nuestros egresados trabajan en:
               </p>
             </div>
-            <div>
-              <img src="/img/about-logos.png" className="h-20" />
-            </div>
+            {/* <section className="customer-logos slider">
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg" />
+              </div>
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg" />
+              </div>
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" />
+              </div>
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" />
+              </div>
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg" />
+              </div>
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" />
+              </div>
+              <div className="slide">
+                <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" />
+              </div>
+            </section> */}
           </div>
         </div>
       </div>

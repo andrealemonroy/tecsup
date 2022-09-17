@@ -17,7 +17,7 @@ import Slider3 from "./Slider3";
 import Slider4 from "./Slider4";
 import Slider5 from "./Slider5";
 
-const Sliders = () => {
+const Sliders = ({myRef, moveForm}) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -35,7 +35,7 @@ const Sliders = () => {
       slidesPerView={1}
     >
       <SwiperSlide>
-        <Slider1 />
+        <Slider1 myRef={myRef} moveForm={moveForm}/>
       </SwiperSlide>
       <SwiperSlide>
         <Slider2 />

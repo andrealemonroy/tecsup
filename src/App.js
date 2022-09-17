@@ -3,33 +3,94 @@ import './App.css';
 import Input from './components/Input';
 import Sliders from './components/Sliders/Sliders';
 import Footer from './components/Footer';
-
+import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 function App() {
-  const submit = (value) => {
-    console.log(value);
+  const myRef = useRef(null);
+  const formRef = useRef(null);
+  // form states
+  const [nombres, setNombres] = useState('');
+  const [paterno, setPaterno] = useState('');
+  const [materno, setMaterno] = useState('');
+  const [correo, setCorreo] = useState('');
+  const [celular, setCelular] = useState('');
+  const [dni, setDni] = useState('');
+  const [carrera, setCarrera] = useState('');
+  const [modalidad, setModalidad] = useState('');
+  const [acepta, setAcepta] = useState('');
+  const [openCarreras, setOpenCarreras] = useState(false);
+  const [openModalidad, setOpenModalidad] = useState(false);
+  const [form, setForm] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      Nombres: nombres,
+      Paterno: paterno,
+      Materno: materno,
+      Correo: correo,
+      Celular: celular,
+      DNI: dni,
+      Carrera: carrera,
+      Modalidad: modalidad,
+      Aceptacion_politicas_privacidad: acepta,
+    };
+
+    axios
+      .post(
+        'https://sheet.best/api/sheets/349b9b2e-6fc5-492d-8c66-3d70f7ef197d',
+        data
+      )
+      .then((response) => {
+        console.log(response);
+        setNombres('');
+        setPaterno('');
+        setMaterno('');
+        setCorreo('');
+        setCelular('');
+        setDni('');
+        setCarrera('');
+        setModalidad('');
+        setAcepta('');
+      });
   };
+  const executeScroll = () => {
+    myRef.current?.scrollIntoView({ behavior: 'smooth' });
+    setForm(true);
+  };
+  const executeScrollMobile = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+    setForm(true);
+  }
+
+  const moveForm = () => {
+    setForm(true);
+  };
+
   return (
-    <div className="bg-white sm:m-auto">
-      <div className="sm:h-20 flex justify-center align-middle items-center">
+    <div className="bg-white sm:m-auto" ref={myRef}>
+      <div className="sm:h-20 flex justify-center align-middle items-center py-4">
         <img className="h-12" src="/img/logo.svg" />
       </div>
       <div className="header height-header">
         <div className="sm:max-w-[1440px] height-header sm:flex relative m-auto">
           <img
             src="/img/header-face.png"
-            className="hidden sm:block absolute left-1/2 ml-20 h-12 mt-28"
+            className="hidden sm:block absolute left-1/2 ml-20 h-12 mt-28 animationRectangleText"
           />
           <img
             src="/img/header-face.png"
-            className="hidden sm:block absolute left-80 mt-96 h-16"
+            className="hidden sm:block absolute left-80 mt-96 h-16 animationRectangleText"
           />
           <div className="sm:w-3/5 flex">
-            <div className="">
+            <div className="inherit z-10">
               <img
                 src="/img/header-plane.png"
-                className="absolute top-20 left-96 hidden sm:block "
+                className="absolute top-20 left-96 hidden sm:block animationRectangleText"
               />
-              <div className="sm:m-20 p-10 sm:p-0">
+              <div className="sm:m-20 p-10 sm:p-0 animationText">
                 <h1 className="text-white font-medium sm:text-3xl text-xl">
                   ÚNETE A LA
                 </h1>
@@ -49,13 +110,21 @@ function App() {
                 <h1 className="text-yellow font-black sm:text-4xl text-2xl sm:w-full w-40 sm:mt-0 mt-20">
                   ADMISIÓN 2023-01
                 </h1>
+                <div className="block sm:hidden mt-2">
+                  <div className="cursor-pointer border-2 border-white rounded text-white px-2 py-1 w-fit" onClick={()=> executeScrollMobile}>
+                    Postula a Tecsup
+                  </div>
+                </div>
               </div>
               <div className="sm:flex absolute bottom-0 left-36 rubik hidden">
-                <img src="/img/header-rectangle.svg" className="h-40" />
-                <div className="absolute left-44 font-semibold text-xl mt-4">
+                <img
+                  src="/img/header-rectangle.svg"
+                  className="h-40 animationRectangle"
+                />
+                <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText">
                   Postula a TECSUP
                 </div>
-                <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl">
+                <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
                   ADMISIÓN 23-01
                 </div>
               </div>
@@ -63,66 +132,324 @@ function App() {
             <div className="sm:w-1/5 sm:flex items-end hidden">
               <img
                 src="/img/header-person.png"
-                className="absolute img-person"
+                className="absolute img-person animationRectangleText"
               />
             </div>
             <div>
               <img
                 src="img/header-person-mobile.svg"
-                className="sm:hidden block"
+                className="sm:hidden block top-80 animationRectangleText"
               />
             </div>
           </div>
-          <div className="sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4">
-            <div className="bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl w-fit mt-20">
+          <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4 sm:px-20 z-10 relative">
+            <div
+              className={`${
+                form ? 'form' : ''
+              } bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl w-fit mt-20`}
+              ref={formRef}
+            >
               <div className="text-center text-lg font-bold futura">
                 <p>Inscríbete AHORA y</p>
                 <p>obtén BENEFICIOS ÚNICOS</p>
               </div>
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  submit(e.target[0].value);
-                }}
+                onSubmit={handleSubmit}
                 className="sm:flex sm:flex-col space-y-4"
               >
                 <input
                   className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
                   type="text"
                   placeholder="Nombres*"
+                  onChange={(e) => setNombres(e.target.value)}
+                  value={nombres}
                 />
                 <div className="flex space-x-2">
-                  <Input placeholder="Apellido paterno*" />
-                  <Input placeholder="Apellido materno*" />
+                  <input
+                    className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                    type="text"
+                    placeholder="Apellido paterno*"
+                    onChange={(e) => setPaterno(e.target.value)}
+                    value={paterno}
+                  />
+                  <input
+                    className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                    type="text"
+                    placeholder="Apellido materno*"
+                    onChange={(e) => setMaterno(e.target.value)}
+                    value={materno}
+                  />
                 </div>
-                <Input placeholder="Correo electrónico*" />
+                <input
+                  className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                  type="text"
+                  placeholder="Correo electrónico*"
+                  onChange={(e) => setCorreo(e.target.value)}
+                  value={correo}
+                />
                 <div className="flex space-x-2">
-                  <Input placeholder="Celular*" />
-                  <Input placeholder="DNI*" />
+                  <input
+                    className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                    type="text"
+                    placeholder="Celular*"
+                    onChange={(e) => setCelular(e.target.value)}
+                    value={celular}
+                  />
+                  <input
+                    className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
+                    type="text"
+                    placeholder="DNI*"
+                    onChange={(e) => setDni(e.target.value)}
+                    value={dni}
+                  />
                 </div>
                 <div className="flex space-x-2">
-                  <Input placeholder="Carrera*" />
-                  <Input placeholder="Modalidad*" />
+                  <div className="w-full">
+                    <input
+                      className="cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
+                      type="text"
+                      placeholder="Seleccione Carrera*"
+                      onClick={() => setOpenCarreras(!openCarreras)}
+                      value={carrera.replace(/_/g, ' ')}
+                    ></input>
+                    {openCarreras && (
+                      <div className="w-full absolute  max-w-[180px] z-50 overflow-scroll h-40">
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Administración_de_datos');
+                          }}
+                        >
+                          Administración de datos
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera(
+                              'Administración_de_Redes_y_Comunicaciones'
+                            );
+                          }}
+                        >
+                          Administración de Redes y Comunicaciones
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Big_Data_y_Ciencia_de_Datos');
+                          }}
+                        >
+                          Big Data y Ciencia de Datos
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera(
+                              'Diseño_y_Desarrollo_de_Simuladores_y_Videojuegos'
+                            );
+                          }}
+                        >
+                          Diseño y Desarrollo de Simuladores y Videojuegos
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Diseño_y_Desarrollo_de_Software');
+                          }}
+                        >
+                          Diseño y Desarrollo de Software
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Modelado_y_Animación_Digital');
+                          }}
+                        >
+                          Modelado y Animación Digital
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Operaciones_Mineras');
+                          }}
+                        >
+                          Operaciones Mineras
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Procesos_Químicos_y_Metalúrgicos');
+                          }}
+                        >
+                          Procesos Químicos y Metalúrgicos
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Producción_y_Gestión_Industrial');
+                          }}
+                        >
+                          Producción y Gestión Industrial
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Logística_Digital_Integrada');
+                          }}
+                        >
+                          Logística Digital Integrada
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Diseño_Industrial');
+                          }}
+                        >
+                          Diseño Industrial{' '}
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Aviónica_y_Mecánica_Aeronáutica');
+                          }}
+                        >
+                          Aviónica y Mecánica Aeronáutica
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera(
+                              'Gestión_y_Mantenimiento_de_Maquinaria_Industrial'
+                            );
+                          }}
+                        >
+                          Gestión y Mantenimiento de Maquinaria Industrial
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera(
+                              'Gestión_y_Mantenimiento_de_Maquinaria_Pesada'
+                            );
+                          }}
+                        >
+                          Gestión y Mantenimiento de Maquinaria Pesada
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Mantenimiento_de_Equipo_Pesado');
+                          }}
+                        >
+                          Mantenimiento de Equipo Pesado
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Mecatrónica_Industrial');
+                          }}
+                        >
+                          Mecatrónica Industrial
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera('Electricidad_Industrial');
+                          }}
+                        >
+                          Electricidad Industrial
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={(e) => {
+                            setOpenCarreras(false);
+                            setCarrera(
+                              'Electrónica_y_Automatización_Industrial'
+                            );
+                          }}
+                        >
+                          Electrónica y Automatización Industrial
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <div className="w-full">
+                    <input
+                      className="cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
+                      type="text"
+                      placeholder="Modalidad*"
+                      value={modalidad}
+                      onClick={(e) => setOpenModalidad(!openModalidad)}
+                    ></input>
+                    {openModalidad && (
+                      <div className="w-full absolute max-w-[180px] z-50">
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={() => {
+                            setModalidad('Alumno_Talento');
+                            setOpenModalidad(false);
+                          }}
+                        >
+                          Alumno Talento
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={() => {
+                            setModalidad('Examen_de_Admisión');
+                            setOpenModalidad(false);
+                          }}
+                        >
+                          Examen de Admisión
+                        </div>
+                        <div
+                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          onClick={() => {
+                            setModalidad('Tec_Gym');
+                            setOpenModalidad(false);
+                          }}
+                        >
+                          Tec Gym
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div class="item_seleccion flex">
+                <div className="item_seleccion flex">
                   <input
                     type="radio"
                     checked={false}
-                    onChange={() => {}}
+                    onChange={(e) => setAcepta(e.target.value)}
                     name="radio"
+                    value={acepta}
                     id="radio-one"
-                    class="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
+                    className="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
                   />
                   <label
-                    for="radio-one"
-                    class="ml-2 text-gray-400 text-sm avenir m-auto items-center"
+                    htmlFor="radio-one"
+                    className="ml-2 text-gray-400 text-sm avenir m-auto items-center"
                   >
                     He leído y acepto la políticas de privacidad
                   </label>
                 </div>
                 <button
                   type="submit"
-                  className="bg-lightBlue text-white font-bold py-2 px-4 rounded"
+                  className="bg-lightBlue text-white font-bold py-2 px-4 rounded w-full"
                 >
                   Inscríbete aquí
                 </button>
@@ -131,13 +458,17 @@ function App() {
             <div>
               <img
                 src="/img/header-face.png"
-                className="absolute mt-4 h-20 hidden sm:block"
+                className="absolute mt-4 h-20 hidden sm:block animationRectangleText"
               />
             </div>
           </div>
+          <img
+            src="/img/header-person-mobile_1.png"
+            className="absolute bottom-0 h-5/6 sm:hidden z-0 right-0 animationRectangleText"
+          />
         </div>
       </div>
-      <Sliders />
+      <Sliders myRef={myRef} moveForm={moveForm} />
       <div className="testimonies sm:h-screen bg-lightBlack">
         <div className="sm:flex h-full justify-center">
           <div className="sm:w-5/12 sm:mt-40">
@@ -147,13 +478,52 @@ function App() {
             <h3 className="text-2xl sm:text-4xl text-white rubik font-bold text-center">
               NUESTROS EGRESADOS?
             </h3>
-            <div className="sm:flex justify-center">
-              <img src="/img/testimonies-video.png" className="sm:h-72" />
+            <div className="sm:flex justify-center mt-4">
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 3500,
+                  disableOnInteraction: false,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                slidesPerView={1}
+                modules={[Autoplay, Pagination, Navigation]}
+              >
+                <SwiperSlide>
+                  <div className="pb-8">
+                    <iframe
+                      src="/videos/4-ENTREVISTA.mp4"
+                      width="320"
+                      height="180"
+                      className="rounded-xl"
+                      autoPlay={false}
+                    ></iframe>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="pb-8">
+                    <iframe
+                      src="/videos/11-ENTREVISTA.mp4"
+                      width="320"
+                      height="180"
+                      className="rounded-xl"
+                      autoPlay={false}
+                    ></iframe>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
           <div className="sm:w-5/12 flex justify-end">
             <div className="sm:w-3/12 sm:flex sm:flex-col-reverse items-end mb-20 flex flex-col-reverse">
-              <div className="bg-yellow h-30 w-40 sm:w-60 px-4 rounded-xl text-center py-2 cursor-pointer">
+              <div
+                className="bg-yellow h-30 w-40 sm:w-60 px-4 rounded-xl text-center py-2 cursor-pointer"
+                onClick={executeScroll}
+              >
                 <p className="avenir sm:text-lg text-xs">Este es mi momento</p>
                 <p className="futura font-bold text-md sm:text-xl">
                   ¡Quiero inscribirme!

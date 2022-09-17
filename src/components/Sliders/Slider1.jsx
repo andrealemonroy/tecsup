@@ -1,8 +1,13 @@
-import React from "react";
+import React from 'react';
 
-const Slider1 = () => { 
+const Slider1 = ({ myRef, moveForm }) => {
+  const executeScroll = () => {
+    myRef.current?.scrollIntoView({ behavior: 'smooth' });
+    moveForm()
+  };
+
   return (
-    <div className="about sm:h-screen w-screen flex justify-center">
+    <div className="about sm:h-screen w-screen flex justify-center items-center">
       <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
           <div className="block sm:flex justify-center items-center">
@@ -16,9 +21,15 @@ const Slider1 = () => {
                   5 DATOS
                 </h3>
                 <div className="fira-light">
-                  <p className="text-center text-md sm:text-xl">Sobre Tecsup que </p>
-                  <p className="text-center text-md sm:text-xl">te ayudarán a tomar</p>
-                  <p className="text-center text-md sm:text-xl">la mejor decisión</p>
+                  <p className="text-center text-md sm:text-xl">
+                    Sobre Tecsup que{' '}
+                  </p>
+                  <p className="text-center text-md sm:text-xl">
+                    te ayudarán a tomar
+                  </p>
+                  <p className="text-center text-md sm:text-xl">
+                    la mejor decisión
+                  </p>
                 </div>
               </div>
             </div>
@@ -29,7 +40,7 @@ const Slider1 = () => {
         </div>
         <div className="flex">
           <div>
-            <div className="h-[68px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-4">
               <p className="text-white m-auto text-center text-6xl font-black">
                 TIP
               </p>
@@ -38,7 +49,9 @@ const Slider1 = () => {
               </p>
             </div>
             <div className="fira-light mt-4">
-              <p className="text-center text-md sm:text-xl">Asegúrate de que la</p>
+              <p className="text-center text-md sm:text-xl">
+                Asegúrate de que la
+              </p>
               <p className="text-center text-md sm:text-xl">
                 institución que elijas cuente con
               </p>
@@ -50,23 +63,23 @@ const Slider1 = () => {
             <div className="h-1 w-20 bg-lightBlue m-auto mt-4"></div>
             <div className="sm:w-96 m-auto mt-4 text-md">
               <p className="fira-light">
-                Es muy importante conocer todas las ventajasde la institución
-                donde vas a estudiar, así comosi está{" "}
-                <span className="fira-medium">licenciada</span>, si tiene
-                <span className="fira-medium">convenios</span> y cuál essu
-                enfoque o la{" "}
-                <span className="fira-medium">visión a futuro.</span>
+                Es muy importante conocer todas las ventajas de la institución
+                donde vas a estudiar, así comosi está{' '}
+                <span className="fira-medium"> licenciada</span>, si tiene
+                <span className="fira-medium"> convenios</span> y cuál es su
+                enfoque o la{' '}
+                <span className="fira-medium"> visión a futuro.</span>
               </p>
             </div>
             <div>
               <img
                 src="img/about-video1.png"
-                className="h-48 m-auto mt-4 cursor-pointer"
+                className="h-40 m-auto mt-4 cursor-pointer"
               />
             </div>
             <div>
               <p className="fira-light text-center">De aquí soy</p>
-              <div className="bg-dialog-button">
+              <div className="bg-dialog-button" onClick={() => executeScroll()}>
                 <p className="text-center m-auto text-xl rubik text-white font-bold">
                   ¡Dame info!
                 </p>
