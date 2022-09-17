@@ -10,6 +10,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper';
 function App() {
   const myRef = useRef(null);
   const formRef = useRef(null);
+  const directForm = useRef(null);
   // form states
   const [nombres, setNombres] = useState('');
   const [paterno, setPaterno] = useState('');
@@ -111,7 +112,7 @@ function App() {
                   ADMISIÓN 2023-01
                 </h1>
                 <div className="block sm:hidden mt-2">
-                  <div className="cursor-pointer border-2 border-white rounded text-white px-2 py-1 w-fit" onClick={()=> executeScrollMobile}>
+                  <div className="cursor-pointer border-2 border-white rounded text-white px-2 py-1 w-fit" onClick={()=> executeScrollMobile()} >
                     Postula a Tecsup
                   </div>
                 </div>
@@ -121,7 +122,7 @@ function App() {
                   src="/img/header-rectangle.svg"
                   className="h-40 animationRectangle"
                 />
-                <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText">
+                <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText" >
                   Postula a TECSUP
                 </div>
                 <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
@@ -156,6 +157,7 @@ function App() {
               <form
                 onSubmit={handleSubmit}
                 className="sm:flex sm:flex-col space-y-4"
+                ref={directForm}
               >
                 <input
                   className="w-full border appearance-none border-lightBlue rounded py-2 px-4"
@@ -468,7 +470,7 @@ function App() {
           />
         </div>
       </div>
-      <Sliders myRef={myRef} moveForm={moveForm} />
+      <Sliders myRef={myRef} moveForm={moveForm} mobileRef={formRef} />
       <div className="testimonies sm:h-screen bg-lightBlack">
         <div className="sm:flex h-full justify-center">
           <div className="sm:w-5/12 sm:mt-40">

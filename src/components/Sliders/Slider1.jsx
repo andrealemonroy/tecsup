@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Slider1 = ({ myRef, moveForm }) => {
+const Slider1 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
-    myRef.current?.scrollIntoView({ behavior: 'smooth' });
+    window.innerWidth > 768 ? myRef.current?.scrollIntoView({ behavior: 'smooth' }) : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
     moveForm()
   };
 

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Slider1 = () => {
+const Slider2 = ({ myRef, moveForm, mobileRef }) => {
+  const executeScroll = () => {
+    window.innerWidth > 768 ? myRef.current?.scrollIntoView({ behavior: 'smooth' }) : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+    moveForm()
+  };
   return (
     <div className="about sm:h-screen w-screen flex justify-center bg-yellow items-center">
       <div className="block sm:flex h-full sm:space-x-60">
@@ -29,7 +33,7 @@ const Slider1 = () => {
         </div>
         <div className="flex">
           <div>
-            <div className="h-[68px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
               <p className="text-white m-auto text-center text-6xl font-black">
                 TIP
               </p>
@@ -57,7 +61,7 @@ const Slider1 = () => {
             </div>
             <div className='flex flex-col justify-center'>
               <p className="fira-light text-center">Vamos con fe </p>
-              <div className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto">
+              <div className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto" onClick={() => executeScroll()}>
                 <p className="text-center m-auto text-xl rubik text-white font-bold cursor-pointer">
                   ¡Quiero inscribirme!
                 </p>
@@ -73,4 +77,4 @@ const Slider1 = () => {
   );
 };
 
-export default Slider1;
+export default Slider2;

@@ -155,6 +155,11 @@ h3 {
   height: -webkit-fill-available;
 }
 
+@media screen and (max-width: 768px) {
+  .about {
+    padding-bottom: 40px;
+  }
+}
 @keyframes zoom-in-zoom-out {
   0% {
     transform: scale(1, 1);
@@ -214,4 +219,8 @@ h3 {
       display: block;
       opacity: 1;
   }
+}
+
+.swiper-slide{
+  height: initial !important;
 }

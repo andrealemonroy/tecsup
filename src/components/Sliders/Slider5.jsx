@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Slider1 = () => {
+const Slider5 = ({ myRef, moveForm, mobileRef }) => {
+  const executeScroll = () => {
+    window.innerWidth > 768
+      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
+      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+    moveForm();
+  };
   return (
     <div className="about bg-orange w-screen flex justify-center sm:h-screen items-center">
       <div className="block sm:flex h-full sm:space-x-60">
@@ -35,17 +41,17 @@ const Slider1 = () => {
         </div>
         <div className="flex">
           <div>
-            <div className="h-[68px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto sm:mt-10 mt-4">
               <p className="text-white m-auto text-center text-6xl font-black">
                 TIP
               </p>
               <p className="absolute text-white font-black text-8xl ml-36">5</p>
             </div>
             <div className="fira-light mt-4">
-              <p className="text-center text-xl">
+              <p className="text-center sm:text-xl text-md">
                 Que cuente con las herramientas, laboratorios,
               </p>
-              <p className="text-center text-xl">
+              <p className="text-center sm:text-xl text-md">
                 talleres y tecnología que impulsen tu carrera.
               </p>
             </div>
@@ -68,7 +74,10 @@ const Slider1 = () => {
             </div>
             <div>
               <p className="fira-light text-center">Lo decicí</p>
-              <div className="bg-orangeButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer">
+              <div
+                className="bg-orangeButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer"
+                onClick={() => executeScroll()}
+              >
                 <p className="text-center m-auto text-xl rubik text-white font-bold">
                   ¡Quiero inscribirme YA!
                 </p>
@@ -84,4 +93,4 @@ const Slider1 = () => {
   );
 };
 
-export default Slider1;
+export default Slider5;

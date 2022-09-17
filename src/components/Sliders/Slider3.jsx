@@ -1,12 +1,18 @@
 import React from 'react';
 
-const Slider1 = () => {
+const Slider3 = ({ myRef, moveForm, mobileRef }) => {
+  const executeScroll = () => {
+    window.innerWidth > 768
+      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
+      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+    moveForm();
+  };
   return (
     <div className="about bg-green w-screen flex justify-center sm:h-screen items-center">
       <div className="block sm:flex h-full sm:space-x-60">
         <div className=" relative m-auto">
           <div className="flex justify-center items-center">
-          <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
+            <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
               <div className="m-auto">
                 <h3 className="text-lg sm:text-2xl text-white font-bold text-center">
@@ -35,7 +41,7 @@ const Slider1 = () => {
         </div>
         <div className="flex">
           <div>
-            <div className="h-[68px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
               <p className="text-white m-auto text-center text-6xl font-black">
                 TIP
               </p>
@@ -104,4 +110,4 @@ const Slider1 = () => {
   );
 };
 
-export default Slider1;
+export default Slider3;
