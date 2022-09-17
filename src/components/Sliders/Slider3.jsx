@@ -9,8 +9,8 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
   };
   return (
     <div className="about bg-green w-screen flex justify-center sm:h-screen items-center">
-      <div className="block sm:flex h-full sm:space-x-60">
-        <div className=" relative m-auto">
+      <div className="block sm:flex h-full space-x-12">
+        <div className=" relative m-auto sm:w-1/2">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
@@ -39,7 +39,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
             <img src="img/arrow-green.svg" />
           </div>
         </div>
-        <div className="flex">
+        <div className="flex sm:w-1/2 relative">
           <div>
             <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
               <p className="text-white m-auto text-center text-6xl font-black">
@@ -62,7 +62,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               <div>
                 <img
                   src="img/about-tip3-1.svg"
-                  className="h-20 sm:h-48 m-auto mt-4 cursor-pointer"
+                  className="h-20 sm:h-40 m-auto mt-4 cursor-pointer"
                 />
                 <p className="text-white text-center my-2">Carrera 1</p>
                 <div className="bg-black h-15 w-fit sm:w-48 px-2 py-2 rounded m-auto cursor-pointer">
@@ -76,7 +76,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               <div>
                 <img
                   src="img/about-tip3-2.svg"
-                  className="h-20 sm:h-48 m-auto mt-4 cursor-pointer"
+                  className="h-20 sm:h-40 m-auto mt-4 cursor-pointer"
                 />
                 <p className="text-white text-center my-2">Carrera 2</p>
                 <div className="bg-black h-15 w-fit sm:w-48 px-2 py-2 rounded m-auto cursor-pointer">
@@ -89,7 +89,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               <div>
                 <img
                   src="img/about-tip3-3.svg"
-                  className="h-20 sm:h-48 m-auto mt-4 cursor-pointer"
+                  className="h-20 sm:h-40 m-auto mt-4 cursor-pointer"
                 />
                 <p className="text-white text-center my-2">Carrera 3</p>
                 <div className="bg-black h-15 w-fit sm:w-48 px-2 py-2 rounded m-auto cursor-pointer">
@@ -101,8 +101,8 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               </div>
             </div>
           </div>
-          <div>
-            <img src="img/graduation.svg" className="w-48" />
+          <div className=''>
+            <img src="img/graduation.svg" className="w-40 absolute right-10" />
           </div>
         </div>
       </div>

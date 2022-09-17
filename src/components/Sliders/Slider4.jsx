@@ -1,14 +1,16 @@
 import React from 'react';
 
-const Slider4  = ({ myRef, moveForm, mobileRef }) => {
+const Slider4 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
-    window.innerWidth > 768 ? myRef.current?.scrollIntoView({ behavior: 'smooth' }) : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
-    moveForm()
+    window.innerWidth > 768
+      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
+      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+    moveForm();
   };
   return (
     <div className="about bg-pink w-screen flex justify-center sm:h-screen items-center">
-      <div className="block sm:flex h-full sm:space-x-60">
-        <div className=" relative m-auto">
+      <div className="block sm:flex h-full sm:space-x-40">
+        <div className=" relative m-auto w-1/2">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
@@ -58,10 +60,14 @@ const Slider4  = ({ myRef, moveForm, mobileRef }) => {
                 ayudando a que te insertes en el mundo laboral desde 4to ciclo y
                 eres asesorado por un docente.
               </p>
+
             </div>
             <div>
               <p className="fira-light text-center">De aquí soy</p>
-              <div className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer" onClick={() => executeScroll()}>
+              <div
+                className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer"
+                onClick={() => executeScroll()}
+              >
                 <p className="text-center m-auto text-xl rubik text-white font-bold">
                   ¡Quiero inscribirme YA!
                 </p>
@@ -96,6 +102,12 @@ const Slider4  = ({ myRef, moveForm, mobileRef }) => {
               </div>
             </section> */}
           </div>
+          <div>
+                <img
+                  src="img/about-tip3-plane.png"
+                  className="h-40 sm:h-40 m-auto mt-4 cursor-pointer"
+                />
+              </div>
         </div>
       </div>
     </div>

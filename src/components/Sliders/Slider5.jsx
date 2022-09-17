@@ -10,7 +10,7 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
   return (
     <div className="about bg-orange w-screen flex justify-center sm:h-screen items-center">
       <div className="block sm:flex h-full sm:space-x-60">
-        <div className=" relative m-auto">
+      <div className=" relative m-auto w-1/2">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
