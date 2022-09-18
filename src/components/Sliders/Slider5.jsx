@@ -9,8 +9,8 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
   };
   return (
     <div className="about bg-orange w-screen flex justify-center sm:h-screen items-center">
-      <div className="block sm:flex h-full sm:space-x-60">
-      <div className=" relative m-auto w-1/2">
+      <div className="block sm:flex h-full sm:space-x-40">
+        <div className=" relative m-auto sm:w-1/2">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
@@ -39,26 +39,29 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
             <img src="img/arrow-orange-dark.svg" />
           </div>
         </div>
-        <div className="flex">
+        <div className="flex sm:w-1/2 relative">
           <div>
             <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto sm:mt-10 mt-4">
-              <p className="text-white m-auto text-center text-6xl font-black">
+              <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
               <p className="absolute text-white font-black text-8xl ml-36">5</p>
             </div>
-            <div className="fira-light mt-4">
+            <div className="fira-light mt-4 leading-5">
               <p className="text-center sm:text-xl text-md">
-                Que cuente con las herramientas, laboratorios,
+                Que cuente con las{' '}
+                <span className="fira-medium">herramientas, laboratorios,</span>
               </p>
               <p className="text-center sm:text-xl text-md">
-                talleres y tecnología que impulsen tu carrera.
+                <span className="fira-medium">
+                  talleres y tecnología que impulsen tu carrera.
+                </span>
               </p>
             </div>
             <div className="rubik font-bold text-3xl text-center mt-4">
               <p>INFRAESTRUCTURA</p>
             </div>
-            <div className="h-1 w-20 bg-orange   m-auto mt-4"></div>
+            <div className="h-1 w-20 bg-orangeButton m-auto mt-4"></div>
             <div className="w-96 m-auto mt-4">
               <p className="fira-light m-auto">
                 Un buen profesional no solo necesita de TEORÍA, debe de
@@ -68,24 +71,33 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
             </div>
             <div>
               <img
-                src="img/campus.svg"
+                src="img/about-tip5-img.png"
                 className="h-48 m-auto mt-4 cursor-pointer"
               />
             </div>
             <div>
-              <p className="fira-light text-center">Lo decicí</p>
-              <div
-                className="bg-orangeButton rounded h-15 w-fit px-10 py-2 m-auto cursor-pointer"
-                onClick={() => executeScroll()}
-              >
-                <p className="text-center m-auto text-xl rubik text-white font-bold">
-                  ¡Quiero inscribirme YA!
-                </p>
+              <p className="fira-light text-center mt-2">¡Lo decidí!</p>
+              <div className="flex justify-center ml-20 mt-2">
+                <div
+                  className="bg-dialog-button-5"
+                  onClick={() => executeScroll()}
+                >
+                  <p className="text-center text-xl rubik text-white font-bold leading-6 mt-4">
+                    ¡Quiero
+                  </p>
+                  <p className="text-center text-xl rubik text-white font-bold leading-6">
+                    inscribirme YA!
+                  </p>
+                </div>
+                <img
+                  src="/img/about-tip1-button-ship.svg"
+                  className="w-28 h-full button-ship-4"
+                />
               </div>
             </div>
           </div>
-          <div className="mt-4">
-            <img src="img/rocket.svg" className="w-20" />
+          <div className="sm:block hidden">
+            <img src="img/rocket.svg" className="w-24 absolute top-40" />
           </div>
         </div>
       </div>

@@ -7,9 +7,6 @@ const Footer = () => {
         <p className="text-footer">
           © 2020 TECSUP - Todos los derechos reservados.
         </p>
-        <div>
-          <img className="logowa" src="/img/wp-logo.svg" />
-        </div>
       </div>
     </div>
   );

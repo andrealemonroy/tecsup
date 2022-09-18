@@ -2,14 +2,16 @@ import React from 'react';
 
 const Slider1 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
-    window.innerWidth > 768 ? myRef.current?.scrollIntoView({ behavior: 'smooth' }) : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
-    moveForm()
+    window.innerWidth > 768
+      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
+      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+    moveForm();
   };
 
   return (
-    <div className="about sm:h-screen w-screen flex justify-center items-center">
-      <div className="block sm:flex h-full sm:space-x-40">
-        <div className=" relative m-auto w-1/2">
+    <div className="about w-screen flex justify-center items-center h-fit">
+      <div className="block sm:flex h-full sm:space-x-60">
+        <div className=" relative m-auto sm:w-1/2 justify-center">
           <div className="block sm:flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
@@ -38,21 +40,20 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
             <img src="img/body-arrows.svg" />
           </div>
         </div>
-        <div className="flex w-1/2 relative">
+        <div className="flex w-1/2 relative justify-center">
           <div>
             <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-4">
-              <p className="text-white m-auto text-center text-6xl font-black">
+              <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
               <p className="absolute text-lightBlue font-black text-8xl ml-36">
                 1
               </p>
             </div>
-            <div className="fira-light mt-4">
-              <p className="text-center text-md sm:text-xl">
+            <div className="fira-light mt-4 ">
+              <p className="text-center text-md sm:text-xl sm:leading-5">
                 Asegúrate de que la
-              </p>
-              <p className="text-center text-md sm:text-xl">
+                <br />
                 institución que elijas cuente con
               </p>
             </div>
@@ -78,11 +79,17 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
               />
             </div>
             <div>
-              <p className="fira-light text-center">De aquí soy</p>
-              <div className="bg-dialog-button" onClick={() => executeScroll()}>
-                <p className="text-center m-auto text-xl rubik text-white font-bold">
-                  ¡Dame info!
-                </p>
+              <p className="fira-light text-center mt-1 mb-2">De aquí soy</p>
+              <div className="flex justify-center ml-20">
+                <div
+                  className="bg-dialog-button"
+                  onClick={() => executeScroll()}
+                >
+                  <p className="text-center m-auto text-xl rubik text-white font-bold">
+                    ¡Dame info!
+                  </p>
+                </div>
+                <img src="/img/about-tip1-button-ship.svg" className='w-24 h-full button-ship'/>
               </div>
             </div>
           </div>

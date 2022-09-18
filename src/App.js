@@ -64,14 +64,17 @@ function App() {
   const executeScrollMobile = () => {
     formRef.current?.scrollIntoView({ behavior: 'smooth' });
     setForm(true);
-  }
+  };
 
   const moveForm = () => {
     setForm(true);
   };
 
+  const saveFile = () => {
+    window.open('/files/politicas_privacidad.pdf');
+  };
   return (
-    <div className="bg-white sm:m-auto" ref={myRef}>
+    <div className="bg-white sm:m-auto relative" ref={myRef}>
       <div className="sm:h-20 flex justify-center align-middle items-center py-4">
         <img className="h-12" src="/img/logo.svg" />
       </div>
@@ -112,7 +115,10 @@ function App() {
                   ADMISIÓN 2023-01
                 </h1>
                 <div className="block sm:hidden mt-2">
-                  <div className="cursor-pointer border-2 border-white rounded text-white px-2 py-1 w-fit" onClick={()=> executeScrollMobile()} >
+                  <div
+                    className="cursor-pointer border-2 border-white rounded text-white px-2 py-1 w-fit"
+                    onClick={() => executeScrollMobile()}
+                  >
                     Postula a Tecsup
                   </div>
                 </div>
@@ -122,7 +128,7 @@ function App() {
                   src="/img/header-rectangle.svg"
                   className="h-40 animationRectangle"
                 />
-                <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText" >
+                <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText">
                   Postula a TECSUP
                 </div>
                 <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
@@ -133,7 +139,7 @@ function App() {
             <div className="sm:w-1/5 sm:flex items-end hidden">
               <img
                 src="/img/header-person.png"
-                className="absolute img-person animationRectangleText"
+                className="absolute img-person animationRectangleText sm:z-20"
               />
             </div>
             <div>
@@ -147,10 +153,10 @@ function App() {
             <div
               className={`${
                 form ? 'form' : ''
-              } bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl w-fit mt-20`}
+              } bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl sm:w-[440px] w-fit mt-20`}
               ref={formRef}
             >
-              <div className="text-center text-lg font-bold futura">
+              <div className="text-center text-lg font-bold futura leading-5">
                 <p>Inscríbete AHORA y</p>
                 <p>obtén BENEFICIOS ÚNICOS</p>
               </div>
@@ -208,16 +214,16 @@ function App() {
                 <div className="flex space-x-2">
                   <div className="w-full">
                     <input
-                      className="cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
+                      className="select cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
                       type="text"
                       placeholder="Seleccione Carrera*"
                       onClick={() => setOpenCarreras(!openCarreras)}
                       value={carrera.replace(/_/g, ' ')}
                     ></input>
                     {openCarreras && (
-                      <div className="w-full absolute  max-w-[180px] z-50 overflow-scroll h-40">
+                      <div className="w-full absolute  max-w-[200px] z-50 overflow-scroll h-40">
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Administración_de_datos');
@@ -226,7 +232,7 @@ function App() {
                           Administración de datos
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
@@ -237,7 +243,7 @@ function App() {
                           Administración de Redes y Comunicaciones
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Big_Data_y_Ciencia_de_Datos');
@@ -246,7 +252,7 @@ function App() {
                           Big Data y Ciencia de Datos
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
@@ -257,7 +263,7 @@ function App() {
                           Diseño y Desarrollo de Simuladores y Videojuegos
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Diseño_y_Desarrollo_de_Software');
@@ -266,7 +272,7 @@ function App() {
                           Diseño y Desarrollo de Software
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Modelado_y_Animación_Digital');
@@ -275,7 +281,7 @@ function App() {
                           Modelado y Animación Digital
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Operaciones_Mineras');
@@ -284,7 +290,7 @@ function App() {
                           Operaciones Mineras
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Procesos_Químicos_y_Metalúrgicos');
@@ -293,7 +299,7 @@ function App() {
                           Procesos Químicos y Metalúrgicos
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Producción_y_Gestión_Industrial');
@@ -302,7 +308,7 @@ function App() {
                           Producción y Gestión Industrial
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Logística_Digital_Integrada');
@@ -311,7 +317,7 @@ function App() {
                           Logística Digital Integrada
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Diseño_Industrial');
@@ -320,7 +326,7 @@ function App() {
                           Diseño Industrial{' '}
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Aviónica_y_Mecánica_Aeronáutica');
@@ -329,7 +335,7 @@ function App() {
                           Aviónica y Mecánica Aeronáutica
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
@@ -340,7 +346,7 @@ function App() {
                           Gestión y Mantenimiento de Maquinaria Industrial
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
@@ -351,7 +357,7 @@ function App() {
                           Gestión y Mantenimiento de Maquinaria Pesada
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Mantenimiento_de_Equipo_Pesado');
@@ -360,7 +366,7 @@ function App() {
                           Mantenimiento de Equipo Pesado
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Mecatrónica_Industrial');
@@ -369,7 +375,7 @@ function App() {
                           Mecatrónica Industrial
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera('Electricidad_Industrial');
@@ -378,7 +384,7 @@ function App() {
                           Electricidad Industrial
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
@@ -393,16 +399,16 @@ function App() {
                   </div>
                   <div className="w-full">
                     <input
-                      className="cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
+                      className="select cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
                       type="text"
                       placeholder="Modalidad*"
                       value={modalidad}
                       onClick={(e) => setOpenModalidad(!openModalidad)}
                     ></input>
                     {openModalidad && (
-                      <div className="w-full absolute max-w-[180px] z-50">
+                      <div className="w-full absolute max-w-[200px] z-50">
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={() => {
                             setModalidad('Alumno_Talento');
                             setOpenModalidad(false);
@@ -411,7 +417,7 @@ function App() {
                           Alumno Talento
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={() => {
                             setModalidad('Examen_de_Admisión');
                             setOpenModalidad(false);
@@ -420,7 +426,7 @@ function App() {
                           Examen de Admisión
                         </div>
                         <div
-                          className="bg-white px-4 py-2 cursor-pointer text-md hover:bg-gray-50 border border-lightBlue text-gray-800"
+                          className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={() => {
                             setModalidad('Tec_Gym');
                             setOpenModalidad(false);
@@ -432,26 +438,28 @@ function App() {
                     )}
                   </div>
                 </div>
-                <div className="item_seleccion flex">
+                <div className="flex">
                   <input
                     type="radio"
-                    checked={false}
-                    onChange={(e) => setAcepta(e.target.value)}
+                    checked={acepta}
+                    onClick={(e) => setAcepta(!acepta)}
                     name="radio"
-                    value={acepta}
                     id="radio-one"
                     className="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
                   />
-                  <label
-                    htmlFor="radio-one"
-                    className="ml-2 text-gray-400 text-sm avenir m-auto items-center"
-                  >
-                    He leído y acepto la políticas de privacidad
+                  <label className="ml-2 text-gray-400 text-xs avenir m-auto items-center">
+                    He leído y acepto las{' '}
+                    <span
+                      className="cursor-pointer hover:underline hover:font-bold"
+                      onClick={() => saveFile()}
+                    >
+                      políticas de privacidad
+                    </span>
                   </label>
                 </div>
                 <button
                   type="submit"
-                  className="bg-lightBlue text-white font-bold py-2 px-4 rounded w-full"
+                  className="sm:w-52 m-auto bg-lightBlue text-white font-bold py-2 px-4 rounded w-full"
                 >
                   Inscríbete aquí
                 </button>
@@ -482,28 +490,22 @@ function App() {
             </h3>
             <div className="sm:flex justify-center mt-4">
               <Swiper
-                spaceBetween={30}
                 centeredSlides={true}
-                autoplay={{
-                  delay: 3500,
-                  disableOnInteraction: false,
-                }}
                 pagination={{
                   clickable: true,
                 }}
                 navigation={true}
                 slidesPerView={1}
+                paused={true}
                 modules={[Autoplay, Pagination, Navigation]}
               >
                 <SwiperSlide>
                   <div className="pb-8">
-                    <iframe
-                      src="/videos/4-ENTREVISTA.mp4"
-                      width="320"
-                      height="180"
-                      className="rounded-xl"
-                      autoPlay={false}
-                    ></iframe>
+                    <video width="320" controls>
+                      <source
+                        src='/videos/4-ENTREVISTA.mp4'
+                      />
+                    </video>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -541,9 +543,11 @@ function App() {
             </div>
           </div>
         </div>
+        
       </div>
       <div></div>
       <Footer />
+      <img src="/img/curves.png" className='absolute bottom-40 right-0 z-10 curve w-60'/>
     </div>
   );
 }

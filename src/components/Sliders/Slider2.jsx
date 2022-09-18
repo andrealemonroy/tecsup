@@ -10,7 +10,7 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
   return (
     <div className="about sm:h-screen w-screen flex justify-center bg-yellow items-center">
       <div className="block sm:flex h-full sm:space-x-48">
-        <div className=" relative m-auto w-1/2">
+        <div className=" relative m-auto sm:w-1/2 justify-center">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
             <div className="flex flex-col m-auto">
@@ -39,21 +39,21 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
             <img src="img/arrow-orange.svg" />
           </div>
         </div>
-        <div className="flex w-1/2 relative">
+        <div className="flex sm:w-1/2 relative justify-center">
           <div>
             <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
-              <p className="text-white m-auto text-center text-6xl font-black">
+              <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
               <p className="absolute text-red font-black text-8xl ml-36">2</p>
             </div>
-            <div className="fira-light mt-4">
+            <div className="fira-light mt-4 leading-3">
               <p className="text-center text-xl">Que pueda brindarte</p>
             </div>
-            <div className="rubik font-bold text-3xl text-center mt-4">
+            <div className="rubik font-bold text-3xl text-center mt-4 leading-3">
               <p>APOYO ECONÓMICO</p>
             </div>
-            <div className="h-1 w-20 bg-lightBlue m-auto mt-4"></div>
+            <div className="h-1 w-20 bg-pinkButton m-auto mt-4"></div>
             <div className="w-96 m-auto mt-4">
               <p className="fira-light">
                 En estos tiempos es un factor fundamental, tener un soporte con
@@ -68,19 +68,26 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <p className="fira-light text-center">Vamos con fe </p>
-              <div
-                className="bg-pinkButton rounded h-15 w-fit px-10 py-2 m-auto"
-                onClick={() => executeScroll()}
-              >
-                <p className="text-center m-auto text-xl rubik text-white font-bold cursor-pointer">
-                  ¡Quiero inscribirme!
-                </p>
+              <p className="fira-light text-center my-2">Vamos con fe </p>
+
+              <div className="flex justify-center ml-20">
+                <div
+                  className="bg-dialog-button-2"
+                  onClick={() => executeScroll()}
+                >
+                  <p className="text-center m-auto text-xl rubik text-white font-bold">
+                    ¡Quiero inscribirme!
+                  </p>
+                </div>
+                <img
+                  src="/img/about-tip1-button-ship.svg"
+                  className="w-24 h-full button-ship"
+                />
               </div>
             </div>
           </div>
-          <div className="items-start">
-            <img src="img/about-tip2.svg" className="w-40 absolute" />
+          <div className="sm:block hidden">
+            <img src="img/about-tip2.svg" className="w-60 absolute left-2/3" />
           </div>
         </div>
       </div>
