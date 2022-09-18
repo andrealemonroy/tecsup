@@ -504,6 +504,7 @@ function App() {
                     <video width="320" controls>
                       <source
                         src='/videos/4-ENTREVISTA.mp4'
+                        className='rounded-xl'
                       />
                     </video>
                   </div>
