@@ -154,10 +154,12 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 loop={true}
                 breakpoints={{
                   240: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    centeredSlides: false,
                   },
                   768: {
-                    slidesPerView: 2.9,
+                    slidesPerView: 3,
                   },
                 }}
               >

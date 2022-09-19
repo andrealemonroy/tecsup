@@ -10,7 +10,7 @@ const CareerSlider = ({ myRef, name, img, moveForm, mobileRef }) => {
   return (
     <div className="block">
       <img src={img} className="h-20 sm:h-36 m-auto mt-4 cursor-pointer" />
-      <p className="text-white text-center my-2 text-sm w-44">{name}</p>
+      <p className="text-white text-center my-2 text-sm w-44 h-10 leading-4 flex items-center justify-center">{name}</p>
       <div
         className="bg-dialog-button-3 text-center"
         onClick={() => executeScroll()}
