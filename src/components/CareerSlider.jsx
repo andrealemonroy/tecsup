@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
+import { SwiperSlide } from "swiper/react";
 
-const CareerSlider = ({ name, img, moveForm, mobileRef }) => {
+const CareerSlider = ({ myRef, name, img, moveForm, mobileRef }) => {
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
-      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
+      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
     moveForm();
   };
+  console.log(myRef, name, img, moveForm, mobileRef);
   return (
     <SwiperSlide>
       <div className="block">
