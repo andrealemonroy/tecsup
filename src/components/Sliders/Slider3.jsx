@@ -1,89 +1,90 @@
-import React from "react";
-import { Swiper } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import React from 'react';
+import { Swiper } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import { SwiperSlide } from 'swiper/react';
 
-import CareerSlider from "../CareerSlider";
+import CareerSlider from '../CareerSlider';
 
 const Slider3 = ({ myRef, moveForm, mobileRef }) => {
   const ArrayImage = [
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-01.png",
-      descripcion: "Diseño y Desarrollo de Simuladores y Videojuegos",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-01.png',
+      descripcion: 'Diseño y Desarrollo de Simuladores y Videojuegos',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-02.png",
-      descripcion: "Gestión y Mantenimiento de Maquinaría Pesada",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-02.png',
+      descripcion: 'Gestión y Mantenimiento de Maquinaría Pesada',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-03.png",
-      descripcion: "Administración y Redes de Comunicaciones",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-03.png',
+      descripcion: 'Administración y Redes de Comunicaciones',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-04.png",
-      descripcion: "Operación de Plantas de Procesamiento de Minerales",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-04.png',
+      descripcion: 'Operación de Plantas de Procesamiento de Minerales',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-05.png",
-      descripcion: "Tecnología de la Producción",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-05.png',
+      descripcion: 'Tecnología de la Producción',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-06.png",
-      descripcion: "Mecatrónica Industrial",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-06.png',
+      descripcion: 'Mecatrónica Industrial',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-07.png",
-      descripcion: "Administración y Redes de Comunicaciones",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-07.png',
+      descripcion: 'Administración y Redes de Comunicaciones',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-08.png",
-      descripcion: "Diseño y Desarrollo de Simuladores y Videojuegos",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-08.png',
+      descripcion: 'Diseño y Desarrollo de Simuladores y Videojuegos',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-09.png",
-      descripcion: "Electrónica y Automatización Industrial",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-09.png',
+      descripcion: 'Electrónica y Automatización Industrial',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-10.png",
-      descripcion: "Producción y Gestión Industrial",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-10.png',
+      descripcion: 'Producción y Gestión Industrial',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-11.png",
-      descripcion: "Operaciones Mineras",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-11.png',
+      descripcion: 'Operaciones Mineras',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-12.png",
-      descripcion: "Gestión y Mantenimiento de Maquinaría Industrial",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-12.png',
+      descripcion: 'Gestión y Mantenimiento de Maquinaría Industrial',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-13.png",
-      descripcion: "Electricidad Industrial",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-13.png',
+      descripcion: 'Electricidad Industrial',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-14.png",
-      descripcion: "Diseño y Desarrollo de Software",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-14.png',
+      descripcion: 'Diseño y Desarrollo de Software',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-15.png",
-      descripcion: "Procesos Químicos y Metalúrgicos",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-15.png',
+      descripcion: 'Procesos Químicos y Metalúrgicos',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-16.png",
-      descripcion: "Aviónica y Mecánica Aeronáutica",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-16.png',
+      descripcion: 'Aviónica y Mecánica Aeronáutica',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-17.png",
-      descripcion: "Diseño y Desarrollo de Simuladores y Videojuegos",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-17.png',
+      descripcion: 'Diseño y Desarrollo de Simuladores y Videojuegos',
     },
     {
-      nombre: "img/DESKTOP/TIP 04 IMAGENES-18.png",
-      descripcion: "Gestión y Mantenimiento de Maquinaría Pesada",
+      nombre: 'img/DESKTOP/TIP 04 IMAGENES-18.png',
+      descripcion: 'Gestión y Mantenimiento de Maquinaría Pesada',
     },
   ];
 
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
-      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
+      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
+      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
     moveForm();
   };
   return (
@@ -102,7 +103,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 </h3>
                 <div className="fira-light text-white">
                   <p className="text-center text-md sm:text-xl">
-                    Sobre Tecsup que{" "}
+                    Sobre Tecsup que{' '}
                   </p>
                   <p className="text-center text-md sm:text-xl">
                     te ayudarán a tomar
@@ -135,7 +136,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               <p className="fira-light text-white sm:w-10/12 m-auto">
                 Estamos viviendo lo nunca antes pensado,
                 <span className="fira-medium">
-                  {" "}
+                  {' '}
                   el mundo se ACELERÓ X10 y como el futuro de este país debes
                   estar a su ritmo.
                 </span>
@@ -161,13 +162,15 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 }}
               >
                 {ArrayImage.map((item) => (
-                  <CareerSlider
-                    myRef={myRef}
-                    img={item.nombre}
-                    name={item.descripcion}
-                    moveForm={moveForm}
-                    mobileRef={mobileRef}
-                  />
+                  <SwiperSlide>
+                    <CareerSlider
+                      myRef={myRef}
+                      img={item.nombre}
+                      name={item.descripcion}
+                      moveForm={moveForm}
+                      mobileRef={mobileRef}
+                    />
+                  </SwiperSlide>
                 ))}
               </Swiper>
             </div>
