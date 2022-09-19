@@ -40,7 +40,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
           </div>
         </div>
         <div className="flex sm:w-1/2 relative justify-center sm:pr-10">
-          <div className="sm:w-full w-screen p-10 sm:p-0">
+          <div className="sm:w-full w-screen p-7 sm:p-0">
             <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mb-10">
               <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
@@ -62,13 +62,13 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 </span>
               </p>
             </div>
-            <div className="sm:flex m-auto gap-1 sm:max-w-xl">
+            <div className="flex m-auto gap-1 sm:max-w-xl">
               <div>
                 <img
                   src="img/about-tip3-1.png"
                   className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
                 />
-                <p className="text-white text-center my-2">Carrera 1</p>
+                <p className="text-white text-center my-2">Aviónica y Mecánica Aeronáutica</p>
                 <div
                   className="bg-dialog-button-3 text-center m-auto"
                   onClick={() => executeScroll()}
@@ -84,12 +84,12 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 </div>
               </div>
 
-              <div>
+              <div className='hidden sm:block'>
                 <img
                   src="img/about-tip3-2.png"
                   className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
                 />
-                <p className="text-white text-center my-2">Carrera 2</p>
+                <p className="text-white text-center my-2">Gestión y Mantenimiento de Maquinaría Pesada</p>
                 <div
                   className="bg-dialog-button-3 text-center"
                   onClick={() => executeScroll()}
@@ -109,7 +109,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                   src="img/about-tip3-3.png"
                   className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
                 />
-                <p className="text-white text-center my-2">Carrera 3</p>
+                <p className="text-white text-center my-2">Administración y Redes de Comunicaciones</p>
                 <div
                   className="bg-dialog-button-3 text-center"
                   onClick={() => executeScroll()}
