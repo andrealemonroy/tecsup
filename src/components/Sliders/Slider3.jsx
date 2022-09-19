@@ -1,4 +1,6 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper';
 
 const Slider3 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
@@ -63,71 +65,106 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               </p>
             </div>
             <div className="flex m-auto gap-1 sm:max-w-xl">
-              <div>
-                <img
-                  src="img/about-tip3-1.png"
-                  className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
-                />
-                <p className="text-white text-center my-2">Aviónica y Mecánica Aeronáutica</p>
-                <div
-                  className="bg-dialog-button-3 text-center m-auto"
-                  onClick={() => executeScroll()}
-                >
-                  <div className="m-auto">
-                    <p className="text-white text-xs text-center leading-4">
-                      Más info plz
+              <Swiper
+                centeredSlides={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                spaceBetween={0}
+                autoplay={{
+                  delay: 1000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                breakpoints={{
+                  240: {
+                    slidesPerView: 1.2,
+                  },
+                  768: {
+                    slidesPerView: 2.9,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className="block">
+                    <img
+                      src="img/about-tip3-1.png"
+                      className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
+                    />
+                    <p className="text-white text-center w-44 my-2 text-sm">
+                      Aviónica y Mecánica Aeronáutica
                     </p>
-                    <p className="text-center text-md fira text-white font-bold leading-4">
-                      ¡Esta es mi carrera!
-                    </p>
+                    <div
+                      className="bg-dialog-button-3 text-center m-auto"
+                      onClick={() => executeScroll()}
+                    >
+                      <div className="m-auto">
+                        <p className="text-white text-xs text-center leading-4">
+                          Más info plz
+                        </p>
+                        <p className="text-center text-md fira text-white font-bold leading-4">
+                          ¡Esta es mi carrera!
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </SwiperSlide>
 
-              <div className='hidden sm:block'>
-                <img
-                  src="img/about-tip3-2.png"
-                  className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
-                />
-                <p className="text-white text-center my-2">Gestión y Mantenimiento de Maquinaría Pesada</p>
-                <div
-                  className="bg-dialog-button-3 text-center"
-                  onClick={() => executeScroll()}
-                >
-                  <div className="m-auto">
-                    <p className="text-white text-xs text-center leading-4">
-                      Más info plz
+                <SwiperSlide>
+                  <div className="block">
+                    <img
+                      src="img/about-tip3-2.png"
+                      className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
+                    />
+                    <p className="text-white text-center w-44 my-2 text-sm">
+                      Gestión y Mantenimiento de Maquinaría Pesada
                     </p>
-                    <p className="text-center text-md fira text-white font-bold leading-4">
-                      ¡Esta es mi carrera!
-                    </p>
+                    <div
+                      className="bg-dialog-button-3 text-center"
+                      onClick={() => executeScroll()}
+                    >
+                      <div className="m-auto">
+                        <p className="text-white text-xs text-center leading-4">
+                          Más info plz
+                        </p>
+                        <p className="text-center text-md fira text-white font-bold leading-4">
+                          ¡Esta es mi carrera!
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div>
-                <img
-                  src="img/about-tip3-3.png"
-                  className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
-                />
-                <p className="text-white text-center my-2">Administración y Redes de Comunicaciones</p>
-                <div
-                  className="bg-dialog-button-3 text-center"
-                  onClick={() => executeScroll()}
-                >
-                  <div className="m-auto">
-                    <p className="text-white text-xs text-center leading-4">
-                      Más info plz
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className="block">
+                    <img
+                      src="img/about-tip3-3.png"
+                      className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
+                    />
+                    <p className="text-white text-center w-44 my-2 text-sm">
+                      Administración y Redes de Comunicaciones
                     </p>
-                    <p className="text-center text-md fira text-white font-bold leading-4">
-                      ¡Esta es mi carrera!
-                    </p>
+                    <div
+                      className="bg-dialog-button-3 text-center"
+                      onClick={() => executeScroll()}
+                    >
+                      <div className="m-auto">
+                        <p className="text-white text-xs text-center leading-4">
+                          Más info plz
+                        </p>
+                        <p className="text-center text-md fira text-white font-bold leading-4">
+                          ¡Esta es mi carrera!
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
           <div className="">
-            <img src="img/graduation.svg" className="sm:w-40 absolute sm:right-10 w-32 sm:top-auto top-0 right-4" />
+            <img
+              src="img/graduation.svg"
+              className="sm:w-40 absolute sm:right-10 w-32 sm:top-auto top-0 right-4"
+            />
           </div>
         </div>
       </div>

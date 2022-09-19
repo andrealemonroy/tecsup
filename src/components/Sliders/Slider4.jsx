@@ -53,7 +53,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
             </div>
             <div className="h-1 w-20 bg-black m-auto my-4"></div>
             <div className="flex flex-col">
-              <div className="sm:w-96 flex items-end justify-center m-auto">
+              <div className="w-full sm:w-96 flex items-end justify-center m-auto">
                 <div className="h-8 bg-green w-3/5 rounded-t-lg">
                   <p className="font-bold text-md text-white text-center mt-1">
                     Programa de PASANTÍAS

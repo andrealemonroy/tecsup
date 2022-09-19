@@ -1,0 +1,18 @@
+export const careers = [
+    {name: 'Electricidad Industrial', img: 'electricidad-industrial.png'},
+    {name: 'Electrónica y Automatización Industrial', img: 'mecanica-automotriz.png'},
+    {name: 'Mecatrónica Industrial', img: 'mecanica-automotriz.png'},
+    {name: 'Operación de Plantas de Procesamiento de Minerales', img: 'mecanica-automotriz.png'},
+    {name: 'Operaciones Mineras', img: 'mecanica-automotriz.png'},
+    {name: 'Procesos Químicos y Metalúrgicos', img: 'mecanica-automotriz.png'},
+    {name: 'Diseño y Desarrollo de Software', img: 'mecanica-automotriz.png'},
+    {name: 'Administración y Redes de Comunicaciones', img: 'mecanica-automotriz.png'},
+    {name: 'Big Data y Ciencia de Datos', img: 'mecanica-automotriz.png'},
+    {name: 'Diseño y Desarrollo de Simuladores y Videojuegos', img: 'mecanica-automotriz.png'},
+    {name:'Aviónica y Mecánica Aeronáutica', img: 'mecanica-automotriz.png'},
+    {name: 'Gestión y Mantenimiento de Maquinaría Pesada', img: 'mecanica-automotriz.png'},
+    {name: 'Gestión y Mantenimiento de Maquinaría Industrial', img: 'mecanica-automotriz.png'},
+    {name: 'Diseño Industrial', img: 'mecanica-automotriz.png'},
+    {name: 'Producción y Gestión Industrial', img: 'mecanica-automotriz.png'},
+    {name: 'Tecnología de la Producción'    , img: 'mecanica-automotriz.png'},
+]
