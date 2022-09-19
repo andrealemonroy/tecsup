@@ -566,7 +566,7 @@ function App() {
       <Footer />
       <img
         src="/img/curves.png"
-        className="absolute bottom-12 right-0 z-10 curve w-48 hidden sm:block"
+        className="absolute bottom-12 right-0 z-10 curve w-40 hidden sm:block"
       />
     </div>
   );
