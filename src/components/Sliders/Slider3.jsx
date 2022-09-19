@@ -1,90 +1,93 @@
-import React from 'react';
-import { Swiper } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
-import { SwiperSlide } from 'swiper/react';
+import React from "react";
+import { Swiper } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper";
+import { SwiperSlide } from "swiper/react";
 
-import CareerSlider from '../CareerSlider';
+import CareerSlider from "../CareerSlider";
 
 const Slider3 = ({ myRef, moveForm, mobileRef }) => {
   const ArrayImage = [
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-01.png',
-      descripcion: 'Diseño y Desarrollo de Simuladores y Videojuegos',
+      nombre: "img/tip3/Administración de Datos - 2 años_DESKTOP.png",
+      descripcion: "Administración de Datos - 2 años",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-02.png',
-      descripcion: 'Gestión y Mantenimiento de Maquinaría Pesada',
+      nombre: "img/tip3/Administración y Redes de Comunicaciones_DESKTOP.png",
+      descripcion: "Administración y Redes de Comunicaciones",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-03.png',
-      descripcion: 'Administración y Redes de Comunicaciones',
+      nombre: "img/TIP3/Aviónica y Mecánica Aeronáutica_DESKTOP.png",
+      descripcion: "Aviónica y Mecánica Aeronáutica",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-04.png',
-      descripcion: 'Operación de Plantas de Procesamiento de Minerales',
+      nombre: "img/TIP3/Big Data y Ciencia de Datos_DESKTOP.png",
+      descripcion: "Big Data y Ciencia de Datos",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-05.png',
-      descripcion: 'Tecnología de la Producción',
+      nombre: "img/TIP3/Diseño Industrial_DESKTOP.png",
+      descripcion: "Diseño Industrial",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-06.png',
-      descripcion: 'Mecatrónica Industrial',
+      nombre:
+        "img/TIP3/Diseño y Desarrollo de Simuladores y Videojuegos_DESKTOP.png",
+      descripcion: "Diseño y Desarrollo de Simuladores y Videojuegos",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-07.png',
-      descripcion: 'Administración y Redes de Comunicaciones',
+      nombre: "img/TIP3/Diseño y Desarrollo de Software_DESKTOP.png",
+      descripcion: "Diseño y Desarrollo de Software",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-08.png',
-      descripcion: 'Diseño y Desarrollo de Simuladores y Videojuegos',
+      nombre: "img/TIP3/Electricidad Industrial_DESKTOP.png",
+      descripcion: "Electricidad Industrial",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-09.png',
-      descripcion: 'Electrónica y Automatización Industrial',
+      nombre: "img/TIP3/Electrónica y Automatización Industrial_DESKTOP.png",
+      descripcion: "Electrónica y Automatización Industrial",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-10.png',
-      descripcion: 'Producción y Gestión Industrial',
+      nombre:
+        "img/TIP3/Gestión y Mantenimiento de Maquinaría Industrial_DESKTOP.png",
+      descripcion: "Gestión y Mantenimiento de Maquinaría Industrial",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-11.png',
-      descripcion: 'Operaciones Mineras',
+      nombre:
+        "img/TIP3/Gestión y Mantenimiento de Maquinaría Pesada_DESKTOP.png",
+      descripcion: "Gestión y Mantenimiento de Maquinaría Pesada",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-12.png',
-      descripcion: 'Gestión y Mantenimiento de Maquinaría Industrial',
+      nombre: "img/TIP3/Logística Digital Integrada_DESKTOP.png",
+      descripcion: "Logística Digital Integrada",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-13.png',
-      descripcion: 'Electricidad Industrial',
+      nombre: "img/TIP3/Mantenimiento de Equipo Pesado_DESKTOP.png",
+      descripcion: "Mantenimiento de Equipo Pesado",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-14.png',
-      descripcion: 'Diseño y Desarrollo de Software',
+      nombre: "img/TIP3/Mecatrónica Industrial_DESKTOP.png",
+      descripcion: "Mecatrónica Industrial",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-15.png',
-      descripcion: 'Procesos Químicos y Metalúrgicos',
+      nombre: "img/TIP3/Modelado y Animación Digital_DESKTOP.png",
+      descripcion: "Modelado y Animación Digital",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-16.png',
-      descripcion: 'Aviónica y Mecánica Aeronáutica',
+      nombre: "img/TIP3/Operaciones Mineras_DESKTOP.png",
+      descripcion: "Operaciones Mineras",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-17.png',
-      descripcion: 'Diseño y Desarrollo de Simuladores y Videojuegos',
+      nombre: "img/TIP3/Procesos Químicos y Metalúrgicos_DESKTOP.png",
+      descripcion: "Procesos Químicos y Metalúrgicos",
     },
     {
-      nombre: 'img/DESKTOP/TIP 04 IMAGENES-18.png',
-      descripcion: 'Gestión y Mantenimiento de Maquinaría Pesada',
+      nombre: "img/TIP3/Producción y Gestión Industrial_DESKTOP.png",
+      descripcion: "Producción y Gestión Industrial",
     },
   ];
 
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
-      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
+      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
     moveForm();
   };
   return (
@@ -103,7 +106,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 </h3>
                 <div className="fira-light text-white">
                   <p className="text-center text-md sm:text-xl">
-                    Sobre Tecsup que{' '}
+                    Sobre Tecsup que{" "}
                   </p>
                   <p className="text-center text-md sm:text-xl">
                     te ayudarán a tomar
@@ -136,7 +139,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               <p className="fira-light text-white sm:w-10/12 m-auto">
                 Estamos viviendo lo nunca antes pensado,
                 <span className="fira-medium">
-                  {' '}
+                  {" "}
                   el mundo se ACELERÓ X10 y como el futuro de este país debes
                   estar a su ritmo.
                 </span>
