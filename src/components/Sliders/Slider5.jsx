@@ -9,7 +9,7 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
   };
   return (
     <div className="about bg-orange w-screen flex justify-center sm:h-screen items-center">
-      <div className="block sm:flex h-full sm:space-x-40">
+      <div className="block sm:flex h-full sm:space-x-40 items-center">
         <div className=" relative m-auto sm:w-1/2">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
@@ -41,7 +41,7 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
         </div>
         <div className="flex sm:w-1/2 relative">
           <div>
-            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto sm:mt-10 mt-4">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-4">
               <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>

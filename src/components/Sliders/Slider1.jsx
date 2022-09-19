@@ -10,7 +10,7 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
 
   return (
     <div className="about w-screen flex justify-center items-center h-fit">
-      <div className="block sm:flex h-full sm:space-x-60">
+      <div className="block sm:flex h-full sm:space-x-60 items-center">
         <div className=" relative m-auto sm:w-1/2 justify-center">
           <div className="block sm:flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
@@ -40,9 +40,9 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
             <img src="img/body-arrows.svg" />
           </div>
         </div>
-        <div className="flex w-1/2 relative justify-center">
-          <div>
-            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-4">
+        <div className="flex sm:w-1/2 relative justify-center sm:px-0 px-4">
+          <div className="sm:w-full w-screen p-10 sm:p-0">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto">
               <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
@@ -89,12 +89,15 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
                     ¡Dame info!
                   </p>
                 </div>
-                <img src="/img/about-tip1-button-ship.svg" className='w-24 h-full button-ship'/>
+                <img
+                  src="/img/about-tip1-button-ship.svg"
+                  className="w-24 h-full button-ship"
+                />
               </div>
             </div>
           </div>
-          <div className="sm:block hidden">
-            <img src="img/about-books.svg" className="w-40 absolute" />
+          <div className="">
+            <img src="img/about-books.svg" className="sm:w-40 absolute w-20 sm:right-auto right-4" />
           </div>
         </div>
       </div>

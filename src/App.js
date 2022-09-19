@@ -73,6 +73,24 @@ function App() {
   const saveFile = () => {
     window.open('/files/politicas_privacidad.pdf');
   };
+
+  useEffect(() => {
+    document.getElementById('vid1').addEventListener(
+      'loadedmetadata',
+      function () {
+        this.currentTime = 4;
+      },
+      false
+    );
+    document.getElementById('vid2').addEventListener(
+      'loadedmetadata',
+      function () {
+        this.currentTime = 4;
+      },
+      false
+    );
+  }, []);
+
   return (
     <div className="bg-white sm:m-auto relative" ref={myRef}>
       <div className="sm:h-20 flex justify-center align-middle items-center py-4">
@@ -501,23 +519,22 @@ function App() {
               >
                 <SwiperSlide>
                   <div className="pb-8">
-                    <video width="320" controls>
+                    <video width="320" controls id="vid1" className='rounded-xl'>
                       <source
-                        src='/videos/4-ENTREVISTA.mp4'
-                        className='rounded-xl'
+                        src="/videos/4-ENTREVISTA.mp4"
+                        className="rounded-xl"
                       />
                     </video>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="pb-8">
-                    <iframe
-                      src="/videos/11-ENTREVISTA.mp4"
-                      width="320"
-                      height="180"
-                      className="rounded-xl"
-                      autoPlay={false}
-                    ></iframe>
+                    <video width="320" controls id="vid2" className='rounded-xl'>
+                      <source
+                        src="/videos/11-ENTREVISTA.mp4"
+                        className="rounded-xl"
+                      />
+                    </video>
                   </div>
                 </SwiperSlide>
               </Swiper>
@@ -544,11 +561,13 @@ function App() {
             </div>
           </div>
         </div>
-        
       </div>
       <div></div>
       <Footer />
-      <img src="/img/curves.png" className='absolute bottom-40 right-0 z-10 curve w-60'/>
+      <img
+        src="/img/curves.png"
+        className="absolute bottom-12 right-0 z-10 curve w-48 hidden sm:block"
+      />
     </div>
   );
 }

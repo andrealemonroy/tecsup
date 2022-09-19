@@ -9,7 +9,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
   };
   return (
     <div className="about bg-pink w-screen flex justify-center sm:h-screen items-center">
-      <div className="block sm:flex h-full sm:space-x-40">
+      <div className="block sm:flex h-full sm:space-x-40 items-center">
         <div className="relative m-auto sm:w-1/2">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
@@ -41,7 +41,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
         </div>
         <div className="relative flex sm:w-1/2">
           <div>
-            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto">
               <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
@@ -53,7 +53,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
             </div>
             <div className="h-1 w-20 bg-black m-auto my-4"></div>
             <div className="flex flex-col">
-              <div className="w-96 flex items-end justify-center m-auto">
+              <div className="sm:w-96 flex items-end justify-center m-auto">
                 <div className="h-8 bg-green w-3/5 rounded-t-lg">
                   <p className="font-bold text-md text-white text-center mt-1">
                     Programa de PASANTÍAS
@@ -62,7 +62,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
                 <div className="h-4 bg-pinkButton w-1/5 rounded-tr-lg"></div>
                 <div className="h-4 bg-orange w-1/5 rounded-tr-lg"></div>
               </div>
-              <div className="w-96 bg-gray-50 rounded-b-2xl h-28 px-4 py-6 m-auto leading-5">
+              <div className="sm:w-96 bg-gray-50 rounded-b-2xl h-28 px-4 py-6 m-auto leading-5">
                 <p className="fira">
                   <span className="font-semibold">
                     En Tecsup potenciamos tu talento,
@@ -105,7 +105,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
           <div className="absolute right-0">
             <img
               src="img/about-tip3-plane.png"
-              className="h-40 sm:h-32 m-auto mt-4 cursor-pointer z-0"
+              className="h-20 sm:h-32 m-auto sm:mt-4 cursor-pointer z-0 mt-10"
             />
           </div>
         </div>

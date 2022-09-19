@@ -9,7 +9,7 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
   };
   return (
     <div className="about sm:h-screen w-screen flex justify-center bg-yellow items-center">
-      <div className="block sm:flex h-full sm:space-x-48">
+      <div className="block sm:flex h-full sm:space-x-48 items-center">
         <div className=" relative m-auto sm:w-1/2 justify-center">
           <div className="flex justify-center items-center">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
@@ -39,9 +39,9 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
             <img src="img/arrow-orange.svg" />
           </div>
         </div>
-        <div className="flex sm:w-1/2 relative justify-center">
-          <div>
-            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+        <div className="flex sm:w-1/2 relative justify-center sm:px-0 px-4">
+          <div className="sm:w-full w-screen p-10 sm:p-0">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mb-10">
               <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
@@ -54,7 +54,7 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
               <p>APOYO ECONÓMICO</p>
             </div>
             <div className="h-1 w-20 bg-pinkButton m-auto mt-4"></div>
-            <div className="w-96 m-auto mt-4">
+            <div className="sm:w-96 m-auto mt-4">
               <p className="fira-light">
                 En estos tiempos es un factor fundamental, tener un soporte con
                 beneficios, becas y financiamiento puede ayudarte a lograr tu
@@ -86,8 +86,8 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
               </div>
             </div>
           </div>
-          <div className="sm:block hidden">
-            <img src="img/about-tip2.svg" className="w-60 absolute left-2/3" />
+          <div className="">
+            <img src="img/about-tip2.svg" className="sm:w-60 absolute sm:left-2/3 w-32 sm:right-auto right-2 top-10 sm:top-auto" />
           </div>
         </div>
       </div>

@@ -8,8 +8,8 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
     moveForm();
   };
   return (
-    <div className="about bg-green w-screen flex justify-center items-center h-fit"> 
-      <div className="block sm:flex h-full">
+    <div className="about bg-green w-screen flex justify-center items-center h-fit">
+      <div className="block sm:flex h-full items-center">
         <div className=" relative m-auto sm:w-1/2 justify-center">
           <div className="block sm:flex justify-center items-center sm:ml-10">
             <img src="img/about-ship.svg" className="h-40 hidden sm:block" />
@@ -40,8 +40,8 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
           </div>
         </div>
         <div className="flex sm:w-1/2 relative justify-center sm:pr-10">
-          <div className="w-full">
-            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mt-10">
+          <div className="sm:w-full w-screen p-10 sm:p-0">
+            <div className="h-[60px] w-40 bg-black rounded-tl-3xl rounded-br-3xl flex items-center relative m-auto mb-10">
               <p className="text-white m-auto text-center text-5xl font-black">
                 TIP
               </p>
@@ -62,15 +62,15 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
                 </span>
               </p>
             </div>
-            <div className="flex m-auto gap-1 sm:max-w-xl">
+            <div className="sm:flex m-auto gap-1 sm:max-w-xl">
               <div>
                 <img
-                  src="img/about-tip3-1.svg"
+                  src="img/about-tip3-1.png"
                   className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
                 />
                 <p className="text-white text-center my-2">Carrera 1</p>
                 <div
-                  className="bg-dialog-button-3 text-center"
+                  className="bg-dialog-button-3 text-center m-auto"
                   onClick={() => executeScroll()}
                 >
                   <div className="m-auto">
@@ -86,7 +86,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
 
               <div>
                 <img
-                  src="img/about-tip3-2.svg"
+                  src="img/about-tip3-2.png"
                   className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
                 />
                 <p className="text-white text-center my-2">Carrera 2</p>
@@ -106,7 +106,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
               </div>
               <div>
                 <img
-                  src="img/about-tip3-3.svg"
+                  src="img/about-tip3-3.png"
                   className="h-20 sm:h-36 m-auto mt-4 cursor-pointer"
                 />
                 <p className="text-white text-center my-2">Carrera 3</p>
@@ -127,7 +127,7 @@ const Slider3 = ({ myRef, moveForm, mobileRef }) => {
             </div>
           </div>
           <div className="">
-            <img src="img/graduation.svg" className="w-40 absolute right-10" />
+            <img src="img/graduation.svg" className="sm:w-40 absolute sm:right-10 w-32 sm:top-auto top-0 right-4" />
           </div>
         </div>
       </div>

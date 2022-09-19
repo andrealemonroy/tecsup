@@ -91,8 +91,9 @@ h3 {
   vertical-align: middle;
   cursor: pointer;
   z-index: 10;
-  width: 100%;
+  margin: auto;
 }
+
 .bg-dialog-button-4 {
   background-image: url('/public/img/about-tip4-bg.svg');
   background-size: contain;
@@ -107,7 +108,7 @@ h3 {
   margin: auto;
   cursor: pointer;
   z-index: 10;
-  width: 100%;
+  margin: auto
 }
 
 .bg-dialog-button-5 {
@@ -124,7 +125,7 @@ h3 {
   margin: auto;
   cursor: pointer;
   z-index: 10;
-  width: 100%;
+  margin: auto
 }
 
 .bg-dialog-button-2 {
@@ -421,8 +422,4 @@ input[type='radio']:checked {
 
 .swiper-pagination-bullet-active{
   background-color: black !important;
-}
-
-.curve{
-  margin-right: -50px;
 }
