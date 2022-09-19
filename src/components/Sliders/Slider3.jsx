@@ -8,11 +8,11 @@ import CareerSlider from "../CareerSlider";
 const Slider3 = ({ myRef, moveForm, mobileRef }) => {
   const ArrayImage = [
     {
-      nombre: "img/tip3/Administración de Datos - 2 años_DESKTOP.png",
+      nombre: "img/TIP3/Administración de Datos_2 años_DESKTOP.png",
       descripcion: "Administración de Datos - 2 años",
     },
     {
-      nombre: "img/tip3/Administración y Redes de Comunicaciones_DESKTOP.png",
+      nombre: "img/TIP3/Administración y Redes de Comunicaciones_DESKTOP.png",
       descripcion: "Administración y Redes de Comunicaciones",
     },
     {
