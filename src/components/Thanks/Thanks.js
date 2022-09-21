@@ -83,7 +83,7 @@ function Thanks() {
               />
               <div className="sm:m-20 p-10 sm:p-0 animationText">
                 <h1 className="text-white font-medium sm:text-3xl text-xl">
-                  ÚNETE A GRACIAS LA
+                  ÚNETE A LA
                 </h1>
                 <h1 className="text-yellow font-black text-5xl">MEJOR</h1>
                 <div className="flex">
@@ -138,15 +138,14 @@ function Thanks() {
           </div>
           <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4 sm:px-20 z-10 relative">
             <div className="bg-white p-4 sm:flex sm:flex-col space-y-4 h-3/4 md:h-2/4 items-center  rounded-2xl sm:w-[440px] w-fit mt-20">
-              <div className="sm:flex flex-col py-10">
-                <div className="text-center font-bold futura text-3xl leading-5 leading-9 flex flex-col items-center">
-                  <p>GRACIAS POR</p>
-                  <p>REGISTRARTE</p>
+              <div className="sm:flex flex-col items-center my-auto">
+                <div className="text-center px-18 font-bold futura text-3xl md:text-4xl leading-5 leading-9 flex flex-col items-center">
+                  GRACIAS POR REGISTRARTE
                 </div>
-                <p className="px-20 text-center avenir text-base sm:text-xl py-3">
+                <div className="px-20 text-center avenir text-base sm:text-xl py-3">
                   Pronto uno de nuestros asesores se pondrán en contacto
                   contigo.
-                </p>
+                </div>
               </div>
             </div>
             <div>
