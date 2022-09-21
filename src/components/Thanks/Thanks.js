@@ -137,14 +137,17 @@ function Thanks() {
             </div>
           </div>
           <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4 sm:px-20 z-10 relative">
-            <div className="bg-white p-4 sm:flex sm:flex-col space-y-4 h-3/4 md:h-2/4   rounded-2xl sm:w-[440px] w-fit mt-20">
-              <div className="text-center font-bold futura text-3xl leading-5 leading-9 flex flex-col items-center sm:pt-16 pt-1.5 ">
-                <p>GRACIAS POR</p>
-                <p>REGISTRARTE</p>
+            <div className="bg-white p-4 sm:flex sm:flex-col space-y-4 h-3/4 md:h-2/4 items-center  rounded-2xl sm:w-[440px] w-fit mt-20">
+              <div className="sm:flex flex-col py-10">
+                <div className="text-center font-bold futura text-3xl leading-5 leading-9 flex flex-col items-center">
+                  <p>GRACIAS POR</p>
+                  <p>REGISTRARTE</p>
+                </div>
+                <p className="px-20 text-center avenir text-base sm:text-xl py-3">
+                  Pronto uno de nuestros asesores se pondrán en contacto
+                  contigo.
+                </p>
               </div>
-              <p className="px-20 text-center avenir text-base sm:text-xl">
-                Pronto uno de nuestros asesores se pondrán en contacto contigo.
-              </p>
             </div>
             <div>
               <img
