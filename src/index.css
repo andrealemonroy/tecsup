@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header {
-  background-image: url('/public/img/header-bg.png');
+  background-image: url("/public/img/header-bg.webp");
 
   border-radius: 0 120px 0 0;
   background-size: cover;
@@ -22,51 +22,51 @@
 
 h1,
 h3 {
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
 
 @font-face {
-  font-family: 'Futura';
-  src: url('/public/fonts/FuturaPTBold.otf');
+  font-family: "Futura";
+  src: url("/public/fonts/FuturaPTBold.otf");
 }
 
 @font-face {
-  font-family: 'FiraLight';
-  src: url('/public/fonts/FiraSans-Book.otf');
+  font-family: "FiraLight";
+  src: url("/public/fonts/FiraSans-Book.otf");
 }
 
 @font-face {
-  font-family: 'FiraMedium';
-  src: url('/public/fonts/FiraSans-Medium.otf');
+  font-family: "FiraMedium";
+  src: url("/public/fonts/FiraSans-Medium.otf");
 }
 
 @font-face {
-  font-family: 'FiraSemiBold';
-  src: url('/public/fonts/FiraSans-SemiBold.otf');
+  font-family: "FiraSemiBold";
+  src: url("/public/fonts/FiraSans-SemiBold.otf");
 }
 
 .futura {
-  font-family: 'Futura';
+  font-family: "Futura";
 }
 
 .rubik {
-  font-family: 'Rubik';
+  font-family: "Rubik";
 }
 
 .fira-light {
-  font-family: 'FiraLight';
+  font-family: "FiraLight";
 }
 
 .fira-medium {
-  font-family: 'FiraMedium';
+  font-family: "FiraMedium";
 }
 
 .fira-semi-bold {
-  font-family: 'FiraSemiBold';
+  font-family: "FiraSemiBold";
 }
 
 .bg-dialog-button {
-  background-image: url('/public/img/about-bg-dialog.svg');
+  background-image: url("/public/img/about-bg-dialog.svg");
   background-size: contain;
   height: 60px;
   width: fit-content;
@@ -79,7 +79,7 @@ h3 {
 }
 
 .bg-dialog-button-3 {
-  background-image: url('/public/img/about-tip3-bg.svg');
+  background-image: url("/public/img/about-tip3-bg.svg");
   background-size: contain;
   height: 54px;
   width: fit-content;
@@ -95,7 +95,7 @@ h3 {
 }
 
 .bg-dialog-button-4 {
-  background-image: url('/public/img/about-tip4-bg.svg');
+  background-image: url("/public/img/about-tip4-bg.svg");
   background-size: contain;
   height: 80px;
   width: fit-content;
@@ -108,11 +108,11 @@ h3 {
   margin: auto;
   cursor: pointer;
   z-index: 10;
-  margin: auto
+  margin: auto;
 }
 
 .bg-dialog-button-5 {
-  background-image: url('/public/img/about-tip5-bg.svg');
+  background-image: url("/public/img/about-tip5-bg.svg");
   background-size: contain;
   height: 80px;
   width: fit-content;
@@ -125,11 +125,11 @@ h3 {
   margin: auto;
   cursor: pointer;
   z-index: 10;
-  margin: auto
+  margin: auto;
 }
 
 .bg-dialog-button-2 {
-  background-image: url('/public/img/about-tip2-button.svg');
+  background-image: url("/public/img/about-tip2-button.svg");
   background-size: contain;
   height: 60px;
   width: fit-content;
@@ -142,7 +142,7 @@ h3 {
 }
 
 .testimonies {
-  background-image: url('/public/img/testimonies-bg.png');
+  background-image: url("/public/img/testimonies-bg.png");
   background-size: 80%;
   background-repeat: no-repeat;
   background-position-x: 100px;
@@ -163,7 +163,7 @@ h3 {
 }
 
 .text-footer {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
@@ -323,7 +323,7 @@ input:focus-visible {
   outline: #04b5ec auto 1px;
 }
 
-input[type='radio'] {
+input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -338,12 +338,12 @@ input[type='radio'] {
   padding: 1px;
 }
 
-input[type='radio']:checked {
+input[type="radio"]:checked {
   background: #04b5ec;
 }
 
 .select {
-  background: url('/public/img/select-arrow.svg') no-repeat right;
+  background: url("/public/img/select-arrow.svg") no-repeat right;
   background-size: 8px;
   background-position-x: 98%;
 }
@@ -381,7 +381,7 @@ input[type='radio']:checked {
 .tech-slideshow > div {
   height: 100%;
   width: 2526px;
-  background: url('/public/img/logos.svg');
+  background: url("/public/img/logos.svg");
   position: absolute;
   top: 0;
   left: 10px;
@@ -408,6 +408,6 @@ input[type='radio']:checked {
   }
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: black !important;
 }

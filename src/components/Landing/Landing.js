@@ -1,31 +1,31 @@
-import logo from '../../logo.svg';
-import './Landing.css';
-import Input from '../Input';
-import Sliders from '../Sliders/Sliders';
-import Footer from '../Footer';
-import { useEffect, useRef, useState } from 'react';
-import axios from 'axios';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper';
-import { Link, useNavigate } from 'react-router-dom';
+import logo from "../../logo.svg";
+import "./Landing.css";
+import Input from "../Input";
+import Sliders from "../Sliders/Sliders";
+import Footer from "../Footer";
+import { useEffect, useRef, useState } from "react";
+import axios from "axios";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper";
+import { Link, useNavigate } from "react-router-dom";
 function Landing() {
   const myRef = useRef(null);
   const formRef = useRef(null);
   const directForm = useRef(null);
   // form states
-  const [nombres, setNombres] = useState('');
-  const [paterno, setPaterno] = useState('');
-  const [materno, setMaterno] = useState('');
-  const [correo, setCorreo] = useState('');
-  const [celular, setCelular] = useState('');
-  const [dni, setDni] = useState('');
-  const [carrera, setCarrera] = useState('');
-  const [modalidad, setModalidad] = useState('');
-  const [acepta, setAcepta] = useState('');
+  const [nombres, setNombres] = useState("");
+  const [paterno, setPaterno] = useState("");
+  const [materno, setMaterno] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [celular, setCelular] = useState("");
+  const [dni, setDni] = useState("");
+  const [carrera, setCarrera] = useState("");
+  const [modalidad, setModalidad] = useState("");
+  const [acepta, setAcepta] = useState("");
   const [openCarreras, setOpenCarreras] = useState(false);
   const [openModalidad, setOpenModalidad] = useState(false);
   const [form, setForm] = useState(false);
-  const [messageForm, setMessageForm] = useState('');
+  const [messageForm, setMessageForm] = useState("");
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -62,37 +62,37 @@ function Landing() {
 
         axios
           .post(
-            'https://sheet.best/api/sheets/af09fd96-e7a2-4dcf-84d0-c0f30a7b03ff',
+            "https://sheet.best/api/sheets/af09fd96-e7a2-4dcf-84d0-c0f30a7b03ff",
             data
           )
           .then((response) => {
             console.log(response);
-            setNombres('');
-            setPaterno('');
-            setMaterno('');
-            setCorreo('');
-            setCelular('');
-            setDni('');
-            setCarrera('');
-            setModalidad('');
-            setAcepta('');
-            setMessageForm('');
-            navigate('/gracias');
+            setNombres("");
+            setPaterno("");
+            setMaterno("");
+            setCorreo("");
+            setCelular("");
+            setDni("");
+            setCarrera("");
+            setModalidad("");
+            setAcepta("");
+            setMessageForm("");
+            navigate("/gracias");
           });
       } else {
-        setMessageForm('Por favor, ingresa datos válidos');
+        setMessageForm("Por favor, ingresa datos válidos");
       }
     } else {
-      setMessageForm('Por favor, completa todos los campos');
+      setMessageForm("Por favor, completa todos los campos");
     }
   };
 
   const executeScroll = () => {
-    myRef.current?.scrollIntoView({ behavior: 'smooth' });
+    myRef.current?.scrollIntoView({ behavior: "smooth" });
     setForm(true);
   };
   const executeScrollMobile = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
     setForm(true);
   };
 
@@ -101,19 +101,19 @@ function Landing() {
   };
 
   const saveFile = () => {
-    window.open('/files/politicas_privacidad.pdf');
+    window.open("/files/politicas_privacidad.pdf");
   };
 
   useEffect(() => {
-    document.getElementById('vid1').addEventListener(
-      'loadedmetadata',
+    document.getElementById("vid1").addEventListener(
+      "loadedmetadata",
       function () {
         this.currentTime = 4;
       },
       false
     );
-    document.getElementById('vid2').addEventListener(
-      'loadedmetadata',
+    document.getElementById("vid2").addEventListener(
+      "loadedmetadata",
       function () {
         this.currentTime = 4;
       },
@@ -129,17 +129,17 @@ function Landing() {
       <div className="header height-header">
         <div className="sm:max-w-[1440px] height-header sm:flex relative m-auto">
           <img
-            src="/img/header-face.png"
+            src="/img/header-face.webp"
             className="hidden sm:block absolute left-1/2 ml-20 h-12 mt-28 animationRectangleText"
           />
           <img
-            src="/img/header-face.png"
+            src="/img/header-face.webp"
             className="hidden sm:block absolute left-80 mt-96 h-16 animationRectangleText"
           />
           <div className="sm:w-3/5 flex">
             <div className="inherit z-10">
               <img
-                src="/img/header-plane.png"
+                src="/img/header-plane.webp"
                 className="absolute top-20 left-96 hidden sm:block animationRectangleText"
               />
               <div className="sm:m-20 p-10 sm:p-0 animationText">
@@ -179,14 +179,14 @@ function Landing() {
                 <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText">
                   Postula a TECSUP
                 </div>
-                <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
+                <div className="absolute left-36 top-1/3 border-2 lg:border-0 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
                   ADMISIÓN 23-01
                 </div>
               </div>
             </div>
             <div className="sm:w-1/5 sm:flex items-end hidden">
               <img
-                src="/img/header-person.png"
+                src="/img/header-person.webp"
                 className="absolute img-person animationRectangleText z-1 md:z-10 sm:z-20"
               />
             </div>
@@ -200,7 +200,7 @@ function Landing() {
           <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4 sm:px-20 z-10 relative">
             <div
               className={`${
-                form ? 'form' : ''
+                form ? "form" : ""
               } bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl sm:w-[440px] w-fit mt-20`}
               ref={formRef}
             >
@@ -266,7 +266,7 @@ function Landing() {
                       type="text"
                       placeholder="Seleccione Carrera*"
                       onClick={() => setOpenCarreras(!openCarreras)}
-                      value={carrera.replace(/_/g, ' ')}
+                      value={carrera.replace(/_/g, " ")}
                     ></input>
                     {openCarreras && (
                       <div className="w-full absolute  max-w-[200px] z-50 overflow-scroll h-40">
@@ -274,7 +274,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Administración_de_datos');
+                            setCarrera("Administración_de_datos");
                           }}
                         >
                           Administración de datos
@@ -284,7 +284,7 @@ function Landing() {
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
-                              'Administración_de_Redes_y_Comunicaciones'
+                              "Administración_de_Redes_y_Comunicaciones"
                             );
                           }}
                         >
@@ -294,7 +294,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Big_Data_y_Ciencia_de_Datos');
+                            setCarrera("Big_Data_y_Ciencia_de_Datos");
                           }}
                         >
                           Big Data y Ciencia de Datos
@@ -304,7 +304,7 @@ function Landing() {
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
-                              'Diseño_y_Desarrollo_de_Simuladores_y_Videojuegos'
+                              "Diseño_y_Desarrollo_de_Simuladores_y_Videojuegos"
                             );
                           }}
                         >
@@ -314,7 +314,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Diseño_y_Desarrollo_de_Software');
+                            setCarrera("Diseño_y_Desarrollo_de_Software");
                           }}
                         >
                           Diseño y Desarrollo de Software
@@ -323,7 +323,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Modelado_y_Animación_Digital');
+                            setCarrera("Modelado_y_Animación_Digital");
                           }}
                         >
                           Modelado y Animación Digital
@@ -332,7 +332,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Operaciones_Mineras');
+                            setCarrera("Operaciones_Mineras");
                           }}
                         >
                           Operaciones Mineras
@@ -341,7 +341,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Procesos_Químicos_y_Metalúrgicos');
+                            setCarrera("Procesos_Químicos_y_Metalúrgicos");
                           }}
                         >
                           Procesos Químicos y Metalúrgicos
@@ -350,7 +350,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Producción_y_Gestión_Industrial');
+                            setCarrera("Producción_y_Gestión_Industrial");
                           }}
                         >
                           Producción y Gestión Industrial
@@ -359,7 +359,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Logística_Digital_Integrada');
+                            setCarrera("Logística_Digital_Integrada");
                           }}
                         >
                           Logística Digital Integrada
@@ -368,16 +368,16 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Diseño_Industrial');
+                            setCarrera("Diseño_Industrial");
                           }}
                         >
-                          Diseño Industrial{' '}
+                          Diseño Industrial{" "}
                         </div>
                         <div
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Aviónica_y_Mecánica_Aeronáutica');
+                            setCarrera("Aviónica_y_Mecánica_Aeronáutica");
                           }}
                         >
                           Aviónica y Mecánica Aeronáutica
@@ -387,7 +387,7 @@ function Landing() {
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
-                              'Gestión_y_Mantenimiento_de_Maquinaria_Industrial'
+                              "Gestión_y_Mantenimiento_de_Maquinaria_Industrial"
                             );
                           }}
                         >
@@ -398,7 +398,7 @@ function Landing() {
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
-                              'Gestión_y_Mantenimiento_de_Maquinaria_Pesada'
+                              "Gestión_y_Mantenimiento_de_Maquinaria_Pesada"
                             );
                           }}
                         >
@@ -408,7 +408,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Mantenimiento_de_Equipo_Pesado');
+                            setCarrera("Mantenimiento_de_Equipo_Pesado");
                           }}
                         >
                           Mantenimiento de Equipo Pesado
@@ -417,7 +417,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Mecatrónica_Industrial');
+                            setCarrera("Mecatrónica_Industrial");
                           }}
                         >
                           Mecatrónica Industrial
@@ -426,7 +426,7 @@ function Landing() {
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
                             setOpenCarreras(false);
-                            setCarrera('Electricidad_Industrial');
+                            setCarrera("Electricidad_Industrial");
                           }}
                         >
                           Electricidad Industrial
@@ -436,7 +436,7 @@ function Landing() {
                           onClick={(e) => {
                             setOpenCarreras(false);
                             setCarrera(
-                              'Electrónica_y_Automatización_Industrial'
+                              "Electrónica_y_Automatización_Industrial"
                             );
                           }}
                         >
@@ -458,7 +458,7 @@ function Landing() {
                         <div
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={() => {
-                            setModalidad('Alumno_Talento');
+                            setModalidad("Alumno_Talento");
                             setOpenModalidad(false);
                           }}
                         >
@@ -467,7 +467,7 @@ function Landing() {
                         <div
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={() => {
-                            setModalidad('Examen_de_Admisión');
+                            setModalidad("Examen_de_Admisión");
                             setOpenModalidad(false);
                           }}
                         >
@@ -476,7 +476,7 @@ function Landing() {
                         <div
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={() => {
-                            setModalidad('Tec_Gym');
+                            setModalidad("Tec_Gym");
                             setOpenModalidad(false);
                           }}
                         >
@@ -496,7 +496,7 @@ function Landing() {
                     className="w-4 h-4 bg-pink-300 checked:bg-rose-500 cursor-pointer"
                   />
                   <label className="ml-2 text-gray-400 text-xs avenir m-auto items-center">
-                    He leído y acepto las{' '}
+                    He leído y acepto las{" "}
                     <span
                       className="cursor-pointer hover:underline hover:font-bold"
                       onClick={() => saveFile()}
@@ -521,13 +521,13 @@ function Landing() {
             </div>
             <div>
               <img
-                src="/img/header-face.png"
+                src="/img/header-face.webp"
                 className="absolute mt-4 h-20 hidden sm:block animationRectangleText"
               />
             </div>
           </div>
           <img
-            src="/img/header-person-mobile_1.png"
+            src="/img/header-person-mobile_1.webp"
             className="absolute bottom-0 h-5/6 sm:hidden z-0 right-0 animationRectangleText"
           />
         </div>
@@ -613,12 +613,12 @@ function Landing() {
                 </p>
               </div>
               <img
-                src="/img/testimonies-face.png"
+                src="/img/testimonies-face.webp"
                 className="w-20 sm:w-44 h-auto"
               />
             </div>
             <div className="sm:flex items-end justify-end">
-              <img src="/img/testimonies-person.png" className="sm:h-3/4" />
+              <img src="/img/testimonies-person.webp" className="sm:h-3/4" />
             </div>
           </div>
         </div>

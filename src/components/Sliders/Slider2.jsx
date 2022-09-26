@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Slider2 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
-      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
+      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
     moveForm();
   };
   return (
@@ -23,7 +23,7 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
                 </h3>
                 <div className="fira-light">
                   <p className="text-center text-md sm:text-xl">
-                    Sobre Tecsup que{' '}
+                    Sobre Tecsup que{" "}
                   </p>
                   <p className="text-center text-md sm:text-xl">
                     te ayudarán a tomar
@@ -50,7 +50,7 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
             <div className="fira-light mt-4 leading-3">
               <p className="text-center text-xl">Que pueda brindarte</p>
             </div>
-            <div className="rubik font-bold text-3xl text-center mt-4 leading-3">
+            <div className="rubik font-bold text-xl lg:text-3xl text-center mt-4 leading-3">
               <p>APOYO ECONÓMICO</p>
             </div>
             <div className="h-1 w-20 bg-pinkButton m-auto mt-4"></div>
@@ -63,7 +63,7 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
             </div>
             <div>
               <img
-                src="img/about-tip2-2.png"
+                src="img/about-tip2-2.webp"
                 className="h-48 m-auto mt-4 cursor-pointer"
               />
             </div>
@@ -87,7 +87,10 @@ const Slider2 = ({ myRef, moveForm, mobileRef }) => {
             </div>
           </div>
           <div className="">
-            <img src="img/about-tip2.svg" className="sm:w-60 absolute sm:left-2/3 w-32 sm:right-auto right-2 top-10 sm:top-auto" />
+            <img
+              src="img/about-tip2.svg"
+              className="sm:w-60 absolute sm:left-2/3 w-32 sm:right-auto right-2 top-10 sm:top-auto"
+            />
           </div>
         </div>
       </div>

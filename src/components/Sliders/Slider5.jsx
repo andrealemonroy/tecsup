@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Slider5 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
-      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
+      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
     moveForm();
   };
   return (
@@ -23,7 +23,7 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
                 </h3>
                 <div className="fira-light">
                   <p className="text-center text-md sm:text-xl">
-                    Sobre Tecsup que{' '}
+                    Sobre Tecsup que{" "}
                   </p>
                   <p className="text-center text-md sm:text-xl">
                     te ayudarán a tomar
@@ -48,8 +48,8 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
               <p className="absolute text-white font-black text-8xl ml-36">5</p>
             </div>
             <div className="fira-light mt-4 leading-5">
-              <p className="text-center sm:text-xl text-md">
-                Que cuente con las{' '}
+              <p className="text-center sm:text-xl text-md mx-10 lg:mx-0">
+                Que cuente con las{" "}
                 <span className="fira-medium">herramientas, laboratorios,</span>
               </p>
               <p className="text-center sm:text-xl text-md">
@@ -58,12 +58,12 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
                 </span>
               </p>
             </div>
-            <div className="rubik font-bold text-3xl text-center mt-4">
+            <div className="rubik font-bold text-2xl lg:text-3xl text-center mt-4">
               <p>INFRAESTRUCTURA</p>
             </div>
             <div className="h-1 w-20 bg-orangeButton m-auto mt-4"></div>
             <div className="w-96 m-auto mt-4">
-              <p className="fira-light m-auto">
+              <p className="fira-light mx-8 lg:m-auto">
                 Un buen profesional no solo necesita de TEORÍA, debe de
                 prepararse con la tecnología con la que actualmente trabajan las
                 empresas.
@@ -71,7 +71,7 @@ const Slider5 = ({ myRef, moveForm, mobileRef }) => {
             </div>
             <div>
               <img
-                src="img/about-tip5-img.png"
+                src="img/about-tip5-img.webp"
                 className="h-48 m-auto mt-4 cursor-pointer"
               />
             </div>

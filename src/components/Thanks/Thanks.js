@@ -68,17 +68,17 @@ function Thanks() {
       <div className="header height-header">
         <div className="sm:max-w-[1440px] height-header sm:flex relative m-auto">
           <img
-            src="/img/header-face.png"
+            src="/img/header-face.webp"
             className="hidden sm:block absolute left-1/2 ml-20 h-12 mt-28 animationRectangleText"
           />
           <img
-            src="/img/header-face.png"
+            src="/img/header-face.webp"
             className="hidden sm:block absolute left-80 mt-96 h-16 animationRectangleText"
           />
           <div className="sm:w-3/5 flex">
             <div className="inherit z-10">
               <img
-                src="/img/header-plane.png"
+                src="/img/header-plane.webp"
                 className="absolute top-20 left-96 hidden sm:block animationRectangleText"
               />
               <div className="sm:m-20 p-10 sm:p-0 animationText">
@@ -118,14 +118,14 @@ function Thanks() {
                 <div className="absolute left-44 font-semibold text-xl mt-4 animationRectangleText">
                   Postula a TECSUP
                 </div>
-                <div className="absolute left-36 top-1/3 border-2 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
+                <div className="absolute left-36 top-1/3 border-2 lg:border-0 border-white rounded px-8 py-2 font-semibold text-xl animationRectangleText">
                   ADMISIÓN 23-01
                 </div>
               </div>
             </div>
             <div className="sm:w-1/5 sm:flex items-end hidden">
               <img
-                src="/img/header-person.png"
+                src="/img/header-person.webp"
                 className="absolute img-person animationRectangleText z-1 md:z-10 sm:z-20"
               />
             </div>
@@ -150,13 +150,13 @@ function Thanks() {
             </div>
             <div>
               <img
-                src="/img/header-face.png"
+                src="/img/header-face.webp"
                 className="absolute mt-4 h-20 hidden sm:block animationRectangleText"
               />
             </div>
           </div>
           <img
-            src="/img/header-person-mobile_1.png"
+            src="/img/header-person-mobile_1.webp"
             className="absolute bottom-0 h-5/6 sm:hidden z-0 right-0 animationRectangleText"
           />
         </div>
@@ -242,12 +242,12 @@ function Thanks() {
                 </p>
               </div>
               <img
-                src="/img/testimonies-face.png"
+                src="/img/testimonies-face.webp"
                 className="w-20 sm:w-44 h-auto"
               />
             </div>
             <div className="sm:flex items-end justify-end">
-              <img src="/img/testimonies-person.png" className="sm:h-3/4" />
+              <img src="/img/testimonies-person.webp" className="sm:h-3/4" />
             </div>
           </div>
         </div>

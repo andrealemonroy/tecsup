@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Slider1 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
-      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
+      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
     moveForm();
   };
 
@@ -24,7 +24,7 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
                 </h3>
                 <div className="fira-light">
                   <p className="text-center text-md sm:text-xl">
-                    Sobre Tecsup que{' '}
+                    Sobre Tecsup que{" "}
                   </p>
                   <p className="text-center text-md sm:text-xl">
                     te ayudarán a tomar
@@ -65,16 +65,16 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
             <div className="sm:w-96 m-auto mt-4 text-md">
               <p className="fira-light">
                 Es muy importante conocer todas las ventajas de la institución
-                donde vas a estudiar, así comosi está{' '}
+                donde vas a estudiar, así comosi está{" "}
                 <span className="fira-medium"> licenciada</span>, si tiene
                 <span className="fira-medium"> convenios</span> y cuál es su
-                enfoque o la{' '}
+                enfoque o la{" "}
                 <span className="fira-medium"> visión a futuro.</span>
               </p>
             </div>
             <div>
               <img
-                src="img/about-tip3-1.png"
+                src="img/about-tip3-1.webp"
                 className="h-40 sm:h-48 m-auto mt-4 cursor-pointer"
               />
             </div>
@@ -97,7 +97,10 @@ const Slider1 = ({ myRef, moveForm, mobileRef }) => {
             </div>
           </div>
           <div className="">
-            <img src="img/about-books.svg" className="sm:w-40 absolute w-20 sm:right-auto right-4" />
+            <img
+              src="img/about-books.svg"
+              className="sm:w-40 absolute w-20 sm:right-auto right-4"
+            />
           </div>
         </div>
       </div>

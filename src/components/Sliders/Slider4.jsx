@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Slider4 = ({ myRef, moveForm, mobileRef }) => {
   const executeScroll = () => {
     window.innerWidth > 768
-      ? myRef.current?.scrollIntoView({ behavior: 'smooth' })
-      : mobileRef.current?.scrollIntoView({ behavior: 'smooth' });
+      ? myRef.current?.scrollIntoView({ behavior: "smooth" })
+      : mobileRef.current?.scrollIntoView({ behavior: "smooth" });
     moveForm();
   };
   return (
@@ -23,7 +23,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
                 </h3>
                 <div className="fira-light">
                   <p className="text-center text-md sm:text-xl">
-                    Sobre Tecsup que{' '}
+                    Sobre Tecsup que{" "}
                   </p>
                   <p className="text-center text-md sm:text-xl">
                     te ayudarán a tomar
@@ -66,7 +66,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
                 <p className="fira">
                   <span className="font-semibold">
                     En Tecsup potenciamos tu talento,
-                  </span>{' '}
+                  </span>{" "}
                   ayudando a que te insertes en el mundo laboral desde 4to ciclo
                   y eres asesorado por un docente.
                 </p>
@@ -104,7 +104,7 @@ const Slider4 = ({ myRef, moveForm, mobileRef }) => {
           </div>
           <div className="absolute right-0">
             <img
-              src="img/about-tip3-plane.png"
+              src="img/about-tip3-plane.webp"
               className="h-20 sm:h-32 m-auto sm:mt-4 cursor-pointer z-0 mt-10"
             />
           </div>
