@@ -26,7 +26,7 @@ function Landing() {
   const [openModalidad, setOpenModalidad] = useState(false);
   const [form, setForm] = useState(false);
   const [messageForm, setMessageForm] = useState('');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
@@ -40,37 +40,48 @@ function Landing() {
       modalidad &&
       acepta
     ) {
-      const data = {
-        Nombres: nombres,
-        Paterno: paterno,
-        Materno: materno,
-        Correo: correo,
-        Celular: celular,
-        DNI: dni,
-        Carrera: carrera,
-        Modalidad: modalidad,
-        Aceptacion_politicas_privacidad: acepta,
-      };
+      if (
+        nombres.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/) &&
+        paterno.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/) &&
+        materno.match(/^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/) &&
+        correo.match(/^\w+([.-_+]?\w+)@\w+([.-]?\w+)(\.\w{2,10})+$/) &&
+        celular.match(/^[9][0-9]{1,9}$/) &&
+        dni.match(/^\d{8}(?:[-\s]\d{4})?$/)
+      ) {
+        const data = {
+          Nombres: nombres,
+          Paterno: paterno,
+          Materno: materno,
+          Correo: correo,
+          Celular: celular,
+          DNI: dni,
+          Carrera: carrera,
+          Modalidad: modalidad,
+          Aceptacion_politicas_privacidad: acepta,
+        };
 
-      axios
-        .post(
-          'https://sheet.best/api/sheets/af09fd96-e7a2-4dcf-84d0-c0f30a7b03ff',
-          data
-        )
-        .then((response) => {
-          console.log(response);
-          setNombres('');
-          setPaterno('');
-          setMaterno('');
-          setCorreo('');
-          setCelular('');
-          setDni('');
-          setCarrera('');
-          setModalidad('');
-          setAcepta('');
-          setMessageForm('');
-          navigate('/gracias')
-        });
+        axios
+          .post(
+            'https://sheet.best/api/sheets/af09fd96-e7a2-4dcf-84d0-c0f30a7b03ff',
+            data
+          )
+          .then((response) => {
+            console.log(response);
+            setNombres('');
+            setPaterno('');
+            setMaterno('');
+            setCorreo('');
+            setCelular('');
+            setDni('');
+            setCarrera('');
+            setModalidad('');
+            setAcepta('');
+            setMessageForm('');
+            navigate('/gracias');
+          });
+      } else {
+        setMessageForm('Por favor, ingresa datos válidos');
+      }
     } else {
       setMessageForm('Por favor, completa todos los campos');
     }
