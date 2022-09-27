@@ -37,7 +37,7 @@ function Landing() {
       celular &&
       dni &&
       carrera &&
-      modalidad &&
+      // modalidad &&
       acepta
     ) {
       if (
@@ -56,7 +56,7 @@ function Landing() {
           Celular: celular,
           DNI: dni,
           Carrera: carrera,
-          Modalidad: modalidad,
+          // Modalidad: modalidad,
           Aceptacion_politicas_privacidad: acepta,
         };
 
@@ -74,16 +74,16 @@ function Landing() {
             setCelular("");
             setDni("");
             setCarrera("");
-            setModalidad("");
+            // setModalidad("");
             setAcepta("");
             setMessageForm("");
             navigate("/gracias");
           });
       } else {
-        setMessageForm("Por favor, ingresa datos válidos");
+        setMessageForm("Por favor, ingresa datos válidos.");
       }
     } else {
-      setMessageForm("Por favor, completa todos los campos");
+      setMessageForm("Por favor, completa todos los campos.");
     }
   };
 
@@ -445,7 +445,7 @@ function Landing() {
                       </div>
                     )}
                   </div>
-                  <div className="w-full">
+                  {/* <div className="w-full">
                     <input
                       className="select cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
                       type="text"
@@ -484,7 +484,7 @@ function Landing() {
                         </div>
                       </div>
                     )}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex">
                   <input
@@ -501,7 +501,7 @@ function Landing() {
                       className="cursor-pointer hover:underline hover:font-bold"
                       onClick={() => saveFile()}
                     >
-                      políticas de privacidad
+                      políticas de privacidad.
                     </span>
                   </label>
                 </div>
