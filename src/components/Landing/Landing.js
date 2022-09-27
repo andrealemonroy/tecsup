@@ -20,10 +20,10 @@ function Landing() {
   const [celular, setCelular] = useState("");
   const [dni, setDni] = useState("");
   const [carrera, setCarrera] = useState("");
-  const [modalidad, setModalidad] = useState("");
+  // const [modalidad, setModalidad] = useState("");
   const [acepta, setAcepta] = useState("");
   const [openCarreras, setOpenCarreras] = useState(false);
-  const [openModalidad, setOpenModalidad] = useState(false);
+  // const [openModalidad, setOpenModalidad] = useState(false);
   const [form, setForm] = useState(false);
   const [messageForm, setMessageForm] = useState("");
   const navigate = useNavigate();
@@ -269,7 +269,7 @@ function Landing() {
                       value={carrera.replace(/_/g, " ")}
                     ></input>
                     {openCarreras && (
-                      <div className="w-full absolute  max-w-[200px] z-50 overflow-scroll h-40">
+                      <div className="w-inherit absolute z-50 overflow-scroll h-40">
                         <div
                           className="bg-white px-4 py-2 cursor-pointer text-sm hover:bg-gray-50 border border-lightBlue text-gray-800"
                           onClick={(e) => {
