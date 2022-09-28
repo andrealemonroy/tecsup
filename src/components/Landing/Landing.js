@@ -8,6 +8,7 @@ import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { Link, useNavigate } from "react-router-dom";
+import Formulario from "../Formulario/Formulario";
 function Landing() {
   const myRef = useRef(null);
   const formRef = useRef(null);
@@ -197,7 +198,7 @@ function Landing() {
               />
             </div>
           </div>
-          <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 mx-4 sm:mx-0 sm:pb-0 pb-4 sm:px-20 z-10 relative">
+          <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 px-6 sm:mx-0 sm:pb-2 pb-4 sm:px-10 z-10 relative">
             <div
               className={`${
                 form ? "form" : ""
@@ -208,7 +209,10 @@ function Landing() {
                 <p>Inscríbete AHORA y</p>
                 <p>obtén BENEFICIOS ÚNICOS</p>
               </div>
-              <form
+              <div className="sm:flex sm:flex-col px-3 text-sm">
+                <Formulario />
+              </div>
+              {/* <form
                 onSubmit={handleSubmit}
                 className="sm:flex sm:flex-col space-y-4"
                 ref={directForm}
@@ -444,8 +448,9 @@ function Landing() {
                         </div>
                       </div>
                     )}
-                  </div>
-                  {/* <div className="w-full">
+                  </div> */}
+
+              {/* <div className="w-full">
                     <input
                       className="select cursor-pointer w-full h-10 pl-3 pr-6 text-base placeholder-gray-400 border border-lightBlue rounded appearance-none focus:shadow-outline"
                       type="text"
@@ -485,7 +490,8 @@ function Landing() {
                       </div>
                     )}
                   </div> */}
-                </div>
+
+              {/* </div>
                 <div className="flex">
                   <input
                     type="radio"
@@ -517,7 +523,7 @@ function Landing() {
                 >
                   Inscríbete aquí
                 </button>
-              </form>
+              </form> */}
             </div>
             <div>
               <img
