@@ -128,16 +128,16 @@ function Landing() {
         <img className="h-12" src="/img/logo.svg" />
       </div>
       <div className="header height-header">
-        <div className="sm:max-w-[1440px] height-header sm:flex relative m-auto">
+        <div className="md:max-w-[1440px] height-header md:flex relative m-auto">
           <img
             src="/img/header-face.webp"
-            className="hidden sm:block absolute left-1/2 ml-20 h-12 mt-28 animationRectangleText"
+            className="hidden md:block absolute left-1/2 ml-20 h-12 mt-28 animationRectangleText"
           />
           <img
             src="/img/header-face.webp"
-            className="hidden sm:block absolute left-80 mt-96 h-16 animationRectangleText"
+            className="hidden md:block absolute left-80 mt-96 h-16 animationRectangleText"
           />
-          <div className="sm:w-3/5 flex">
+          <div className="md:w-3/5 flex">
             <div className="inherit z-10">
               <img
                 src="/img/header-plane.webp"
@@ -198,18 +198,18 @@ function Landing() {
               />
             </div>
           </div>
-          <div className=" sm:w-2/5 sm:flex sm:flex-col sm:ml-20 px-6 sm:mx-0 sm:pb-2 pb-4 sm:px-10 z-10 relative">
+          <div className=" md:w-2/5 md:flex md:flex-col md:ml-20 px-6 md:mx-0 md:pb-2 pb-4 md:px-10 z-10 relative">
             <div
               className={`${
                 form ? "form" : ""
-              } bg-white p-4 sm:flex sm:flex-col space-y-4 h-fit rounded-2xl sm:w-[440px] w-fit mt-20`}
+              } bg-white p-4 md:flex md:flex-col space-y-4 h-fit rounded-2xl md:w-[100%] w-fit mt-20`}
               ref={formRef}
             >
               <div className="text-center text-lg font-bold futura leading-5">
                 <p>Inscríbete AHORA y</p>
                 <p>obtén BENEFICIOS ÚNICOS</p>
               </div>
-              <div className="sm:flex sm:flex-col px-3 text-sm">
+              <div className="md:flex md:flex-col px-3 text-sm">
                 <Formulario />
               </div>
               {/* <form
@@ -623,7 +623,7 @@ function Landing() {
                 className="w-20 sm:w-44 h-auto"
               />
             </div>
-            <div className="sm:flex items-end justify-end">
+            <div className="md:flex items-end justify-end">
               <img src="/img/testimonies-person.webp" className="sm:h-3/4" />
             </div>
           </div>
